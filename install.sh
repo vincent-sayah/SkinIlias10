@@ -13,7 +13,13 @@ if [ ! -d "${ILIAS_ROOT}" ]; then
 fi
 
 mkdir -p "${ILIAS_ROOT}/Customizing/skin"
-rm -rf "${SKIN_TARGET}"
+
+if [ -e "${SKIN_TARGET}" ]; then
+    BACKUP_TARGET="${SKIN_TARGET}.bak.$(date +%Y%m%d%H%M%S)"
+    mv "${SKIN_TARGET}" "${BACKUP_TARGET}"
+    echo "Existing eFormarine skin moved to ${BACKUP_TARGET}"
+fi
+
 cp -a "${SKIN_SOURCE}" "${SKIN_TARGET}"
 
 if id "${WEB_USER}" >/dev/null 2>&1; then
@@ -24,4 +30,3 @@ find "${SKIN_TARGET}" -type d -exec chmod 755 {} \;
 find "${SKIN_TARGET}" -type f -exec chmod 644 {} \;
 
 echo "eFormarine installed in ${SKIN_TARGET}"
-

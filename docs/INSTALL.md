@@ -53,10 +53,11 @@ cd /tmp/SkinIlias10
 git pull
 
 cd /var/www/html/ilias
-rm -rf Customizing/skin/eformarine
+if [ -e Customizing/skin/eformarine ]; then
+  mv Customizing/skin/eformarine Customizing/skin/eformarine.bak.$(date +%Y%m%d%H%M%S)
+fi
 cp -a /tmp/SkinIlias10/Customizing/skin/eformarine Customizing/skin/
 chown -R apache:apache Customizing/skin/eformarine
 ```
 
 Ensuite, vide le cache ILIAS et recharge la page avec le cache navigateur ignore.
-

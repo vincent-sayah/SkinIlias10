@@ -27,6 +27,17 @@ bash install.sh /var/www/html/ilias
 bash diagnose.sh /var/www/html/ilias
 ```
 
+Si tu n'es pas certain du chemin exact d'ILIAS, utilise le mode automatique :
+
+```bash
+cd /tmp/SkinIlias10
+bash diagnose.sh auto
+bash install.sh auto
+bash diagnose.sh auto
+```
+
+Le mode `auto` cherche une installation ILIAS sous `/var/www`, `/srv` et `/opt`. S'il trouve plusieurs installations, il affiche les chemins candidats et il faut relancer la commande avec le bon chemin.
+
 ## Activation dans ILIAS
 
 1. Connecte-toi avec un compte administrateur.
@@ -66,8 +77,10 @@ bash diagnose.sh /var/www/html/ilias
 Si le diagnostic indique `MISS components/ILIAS` ou `MISS templates/default/template.xml`, tu n'as pas donne la bonne racine ILIAS au script. Recherche alors la bonne racine :
 
 ```bash
-find /var/www -maxdepth 5 -type f -path '*/templates/default/template.xml' -print
+bash /tmp/SkinIlias10/diagnose.sh auto
 ```
+
+Si le diagnostic indique que les fichiers eFormarine sont presents mais que l'interface ne les affiche toujours pas, redemarre le service PHP-FPM et le serveur web, puis vide le cache ILIAS.
 
 ## Mise a jour
 

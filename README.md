@@ -51,6 +51,13 @@ bash install.sh /var/www/html/ilias
 bash diagnose.sh /var/www/html/ilias
 ```
 
+Si le chemin ILIAS est incertain :
+
+```bash
+bash diagnose.sh auto
+bash install.sh auto
+```
+
 Puis, dans ILIAS :
 
 1. Administration des styles systeme.

@@ -33,6 +33,13 @@ Le skin suit la structure lue dans la branche officielle `release_10` d'ILIAS :
 
 La base Delos reste importee par `eformarine.css`, puis les surcharges Marine nationale sont appliquees.
 
+Sources principales :
+
+- [ILIAS release_10 - System Styles README](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/components/ILIAS/Style/System/README.md)
+- [ILIAS release_10 - ilSystemStyleConfig](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/components/ILIAS/Style/System/classes/Style/class.ilSystemStyleConfig.php)
+- [ILIAS release_10 - ilSkinStyleContainer](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/components/ILIAS/Style/System/classes/Style/class.ilSkinStyleContainer.php)
+- [ILIAS release_10 - template Delos](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/templates/default/template.xml)
+
 ## Installation
 
 ```bash
@@ -57,4 +64,3 @@ La procedure detaillee est dans [docs/INSTALL.md](docs/INSTALL.md).
 Un apercu statique est disponible dans [preview/eformarine-preview.html](preview/eformarine-preview.html).
 
 Il ne remplace pas un test dans ILIAS, mais il permet de visualiser rapidement la palette et les composants principaux.
-

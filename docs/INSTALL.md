@@ -9,15 +9,15 @@ cd /tmp
 git clone https://github.com/vincent-sayah/SkinIlias10.git
 
 cd /var/www/html/ilias
-mkdir -p Customizing/skin
-cp -a /tmp/SkinIlias10/Customizing/skin/eformarine Customizing/skin/
+mkdir -p public/Customizing/skin
+cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
 
-chown -R apache:apache Customizing/skin/eformarine
-find Customizing/skin/eformarine -type d -exec chmod 755 {} \;
-find Customizing/skin/eformarine -type f -exec chmod 644 {} \;
+chown -R apache:apache public/Customizing/skin/eformarine
+find public/Customizing/skin/eformarine -type d -exec chmod 755 {} \;
+find public/Customizing/skin/eformarine -type f -exec chmod 644 {} \;
 ```
 
-Adapte `/var/www/html/ilias` si ton installation ILIAS est ailleurs.
+Adapte `/var/www/html/ilias` si ton installation ILIAS est ailleurs. Pour ILIAS 10, le skin actif doit etre place dans `public/Customizing/skin`.
 
 Ou utilise le script fourni :
 
@@ -52,15 +52,15 @@ Selon la traduction de ton interface, le menu peut se trouver dans `Administrati
 
 ```bash
 cd /var/www/html/ilias
-find Customizing/skin/eformarine -maxdepth 3 -type f | sort
+find public/Customizing/skin/eformarine -maxdepth 3 -type f | sort
 ```
 
 Tu dois voir au minimum :
 
 ```text
-Customizing/skin/eformarine/template.xml
-Customizing/skin/eformarine/eformarine/eformarine.css
-Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
+public/Customizing/skin/eformarine/template.xml
+public/Customizing/skin/eformarine/eformarine/eformarine.css
+public/Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
 ```
 
 Verifie aussi que le fichier XML est lisible par Apache/PHP-FPM, puis vide le cache ILIAS depuis l'administration.
@@ -89,11 +89,12 @@ cd /tmp/SkinIlias10
 git pull
 
 cd /var/www/html/ilias
-if [ -e Customizing/skin/eformarine ]; then
-  mv Customizing/skin/eformarine Customizing/skin/eformarine.bak.$(date +%Y%m%d%H%M%S)
+if [ -e public/Customizing/skin/eformarine ]; then
+  mkdir -p public/Customizing/skin_backups
+  mv public/Customizing/skin/eformarine public/Customizing/skin_backups/eformarine.bak.$(date +%Y%m%d%H%M%S)
 fi
-cp -a /tmp/SkinIlias10/Customizing/skin/eformarine Customizing/skin/
-chown -R apache:apache Customizing/skin/eformarine
+cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
+chown -R apache:apache public/Customizing/skin/eformarine
 ```
 
 Ensuite, vide le cache ILIAS et recharge la page avec le cache navigateur ignore.

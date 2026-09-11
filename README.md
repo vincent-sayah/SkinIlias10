@@ -2,7 +2,7 @@
 
 Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale.
 
-Le depot contient un skin installable dans `Customizing/skin/eformarine` avec un style unique : `eFormarine - Marine nationale`.
+Le depot contient un skin installable dans `public/Customizing/skin/eformarine` pour ILIAS 10, avec un style unique : `eFormarine - Marine nationale`.
 
 ## Structure
 
@@ -27,8 +27,8 @@ install.sh
 
 Le skin suit la structure lue dans la branche officielle `release_10` d'ILIAS :
 
-- `Customizing/skin/<skin_id>/template.xml`
-- `Customizing/skin/<skin_id>/<style_id>/<css_file>.css`
+- `public/Customizing/skin/<skin_id>/template.xml`
+- `public/Customizing/skin/<skin_id>/<style_id>/<css_file>.css`
 - style declare dans `template.xml` avec `id`, `name`, `image_directory`, `css_file`, `sound_directory` et `font_directory`
 
 La base Delos reste importee par `eformarine.css`, puis les surcharges Marine nationale sont appliquees.
@@ -39,6 +39,7 @@ Sources principales :
 - [ILIAS release_10 - ilSystemStyleConfig](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/components/ILIAS/Style/System/classes/Style/class.ilSystemStyleConfig.php)
 - [ILIAS release_10 - ilSkinStyleContainer](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/components/ILIAS/Style/System/classes/Style/class.ilSkinStyleContainer.php)
 - [ILIAS release_10 - template Delos](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/templates/default/template.xml)
+- [ILIAS release_10 - System Styles documentation](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/templates/Readme.md)
 
 ## Installation
 

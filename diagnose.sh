@@ -12,6 +12,22 @@ find_ilias_roots() {
     done | sed 's#/templates/default/template.xml$##' | sort -u
 }
 
+resolve_ilias_root() {
+    local input_root="$1"
+
+    if [ -d "${input_root}/components/ILIAS" ] && [ -f "${input_root}/templates/default/template.xml" ]; then
+        cd "${input_root}" && pwd
+        return 0
+    fi
+
+    if [ -d "${input_root}/../components/ILIAS" ] && [ -f "${input_root}/../templates/default/template.xml" ]; then
+        cd "${input_root}/.." && pwd
+        return 0
+    fi
+
+    return 1
+}
+
 if [ "${ILIAS_ROOT_ARG}" = "auto" ]; then
     mapfile -t ILIAS_ROOT_CANDIDATES < <(find_ilias_roots)
 
@@ -35,16 +51,28 @@ if [ "${ILIAS_ROOT_ARG}" = "auto" ]; then
         exit 2
     fi
 else
-    ILIAS_ROOT="${ILIAS_ROOT_ARG}"
+    if ! ILIAS_ROOT="$(resolve_ilias_root "${ILIAS_ROOT_ARG}")"; then
+        ILIAS_ROOT="${ILIAS_ROOT_ARG}"
+    fi
 fi
 
-SKIN_DIR="${ILIAS_ROOT}/Customizing/skin"
+if [ -d "${ILIAS_ROOT}/public" ]; then
+    ILIAS_WEB_ROOT="${ILIAS_ROOT}/public"
+else
+    ILIAS_WEB_ROOT="${ILIAS_ROOT}"
+fi
+
+SKIN_DIR="${ILIAS_WEB_ROOT}/Customizing/skin"
+LEGACY_SKIN_DIR="${ILIAS_ROOT}/Customizing/skin"
 EFM_DIR="${SKIN_DIR}/eformarine"
 EFM_TEMPLATE="${EFM_DIR}/template.xml"
 EFM_CSS="${EFM_DIR}/eformarine/eformarine.css"
+LEGACY_EFM_TEMPLATE="${LEGACY_SKIN_DIR}/eformarine/template.xml"
 
 echo "== eFormarine / ILIAS skin diagnostic =="
-echo "ILIAS root: ${ILIAS_ROOT}"
+echo "ILIAS base root: ${ILIAS_ROOT}"
+echo "ILIAS web root:  ${ILIAS_WEB_ROOT}"
+echo "Skin path used:  ${SKIN_DIR}"
 echo
 
 if [ ! -d "${ILIAS_ROOT}" ]; then
@@ -62,6 +90,20 @@ for path in "components/ILIAS" "components/ILIAS/Style/System/classes/Style/clas
 done
 echo
 
+echo "== ILIAS 10 web root check =="
+if [ "${ILIAS_WEB_ROOT}" != "${ILIAS_ROOT}" ]; then
+    for path in "assets/css/delos.css" "Customizing"; do
+        if [ -e "${ILIAS_WEB_ROOT}/${path}" ]; then
+            echo "OK  public/${path}"
+        else
+            echo "MISS public/${path}"
+        fi
+    done
+else
+    echo "No public directory detected; using base root as web root."
+fi
+echo
+
 echo "== ILIAS Customizing path in source =="
 CONFIG_FILE="${ILIAS_ROOT}/components/ILIAS/Style/System/classes/Style/class.ilSystemStyleConfig.php"
 if [ -f "${CONFIG_FILE}" ]; then
@@ -76,6 +118,17 @@ if [ -d "${SKIN_DIR}" ]; then
     find "${SKIN_DIR}" -maxdepth 2 -type d | sort
 else
     echo "MISS ${SKIN_DIR}"
+fi
+echo
+
+echo "== Legacy or misplaced skin folder =="
+if [ "${LEGACY_SKIN_DIR}" != "${SKIN_DIR}" ] && [ -d "${LEGACY_SKIN_DIR}" ]; then
+    find "${LEGACY_SKIN_DIR}" -maxdepth 2 -type d | sort
+    if [ -f "${LEGACY_EFM_TEMPLATE}" ] && [ ! -f "${EFM_TEMPLATE}" ]; then
+        echo "LIKELY ISSUE: eFormarine is installed in ${LEGACY_SKIN_DIR}, but ILIAS 10 scans ${SKIN_DIR}."
+    fi
+else
+    echo "none"
 fi
 echo
 
@@ -119,7 +172,7 @@ if [ -f "${EFM_TEMPLATE}" ]; then
         echo "OK  XML parsed\n";
         echo "skin id: " . basename(dirname($file)) . "\n";
         echo "skin name: " . (string) $xml["name"] . "\n";
-        foreach ($xml->style as $style) {
+        foreach ($xml->children() as $style) {
             echo "style id: " . (string) $style["id"] . "\n";
             echo "style name: " . (string) $style["name"] . "\n";
             echo "css file: " . (string) $style["css_file"] . "\n";
@@ -155,14 +208,14 @@ echo
 
 echo "== Final interpretation =="
 if [ ! -f "${EFM_TEMPLATE}" ] || [ ! -f "${EFM_CSS}" ]; then
-    echo "eFormarine is not installed in this ILIAS root."
+    echo "eFormarine is not installed in the skin path used by ILIAS 10."
     echo "Install it with: bash install.sh \"${ILIAS_ROOT}\""
 else
-    echo "eFormarine files are present in this ILIAS root."
+    echo "eFormarine files are present in the skin path used by ILIAS 10."
     echo "If ILIAS still does not show it, restart PHP-FPM/Apache and clear the ILIAS cache."
 fi
 echo
 
 echo "== Notes =="
 echo "The 'other' row in ILIAS is not a real skin. It appears when at least one user is assigned to a missing style."
-echo "If eFormarine is not listed, the skin files are usually not in the ILIAS root scanned by PHP."
+echo "For ILIAS 10, custom skins must be in public/Customizing/skin."

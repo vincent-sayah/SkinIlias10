@@ -14,6 +14,22 @@ find_ilias_roots() {
     done | sed 's#/templates/default/template.xml$##' | sort -u
 }
 
+resolve_ilias_root() {
+    local input_root="$1"
+
+    if [ -d "${input_root}/components/ILIAS" ] && [ -f "${input_root}/templates/default/template.xml" ]; then
+        cd "${input_root}" && pwd
+        return 0
+    fi
+
+    if [ -d "${input_root}/../components/ILIAS" ] && [ -f "${input_root}/../templates/default/template.xml" ]; then
+        cd "${input_root}/.." && pwd
+        return 0
+    fi
+
+    return 1
+}
+
 if [ "${ILIAS_ROOT_ARG}" = "auto" ]; then
     mapfile -t ILIAS_ROOT_CANDIDATES < <(find_ilias_roots)
 
@@ -28,32 +44,59 @@ if [ "${ILIAS_ROOT_ARG}" = "auto" ]; then
         exit 2
     fi
 else
-    ILIAS_ROOT="${ILIAS_ROOT_ARG}"
+    if ! ILIAS_ROOT="$(resolve_ilias_root "${ILIAS_ROOT_ARG}")"; then
+        ILIAS_ROOT="${ILIAS_ROOT_ARG}"
+    fi
 fi
-
-SKIN_TARGET="${ILIAS_ROOT}/Customizing/skin/eformarine"
 
 if [ ! -d "${ILIAS_ROOT}" ]; then
     echo "ILIAS root not found: ${ILIAS_ROOT}" >&2
     exit 1
 fi
 
-mkdir -p "${ILIAS_ROOT}/Customizing/skin"
+if [ -d "${ILIAS_ROOT}/public" ]; then
+    ILIAS_WEB_ROOT="${ILIAS_ROOT}/public"
+else
+    ILIAS_WEB_ROOT="${ILIAS_ROOT}"
+fi
+
+SKIN_PARENT="${ILIAS_WEB_ROOT}/Customizing/skin"
+BACKUP_PARENT="${ILIAS_WEB_ROOT}/Customizing/skin_backups"
+SKIN_TARGET="${SKIN_PARENT}/eformarine"
+LEGACY_SKIN_TARGET="${ILIAS_ROOT}/Customizing/skin/eformarine"
+
+echo "ILIAS base root: ${ILIAS_ROOT}"
+echo "ILIAS skin target: ${SKIN_TARGET}"
+
+mkdir -p "${SKIN_PARENT}" "${BACKUP_PARENT}"
+
+for old_backup in "${SKIN_PARENT}"/eformarine.bak.*; do
+    if [ -e "${old_backup}" ]; then
+        mv "${old_backup}" "${BACKUP_PARENT}/$(basename "${old_backup}")"
+        echo "Moved old backup out of active skin folder: ${old_backup}"
+    fi
+done
 
 if [ -e "${SKIN_TARGET}" ]; then
-    BACKUP_TARGET="${SKIN_TARGET}.bak.$(date +%Y%m%d%H%M%S)"
+    BACKUP_TARGET="${BACKUP_PARENT}/eformarine.bak.$(date +%Y%m%d%H%M%S)"
     mv "${SKIN_TARGET}" "${BACKUP_TARGET}"
     echo "Existing eFormarine skin moved to ${BACKUP_TARGET}"
 fi
 
 cp -a "${SKIN_SOURCE}" "${SKIN_TARGET}"
 
-if id "${WEB_USER}" >/dev/null 2>&1; then
+if id "${WEB_USER}" >/dev/null 2>&1 && getent group "${WEB_GROUP}" >/dev/null 2>&1; then
     chown -R "${WEB_USER}:${WEB_GROUP}" "${SKIN_TARGET}"
+elif id "${WEB_USER}" >/dev/null 2>&1; then
+    chown -R "${WEB_USER}" "${SKIN_TARGET}"
 fi
 
 find "${SKIN_TARGET}" -type d -exec chmod 755 {} \;
 find "${SKIN_TARGET}" -type f -exec chmod 644 {} \;
+
+if [ "${ILIAS_WEB_ROOT}" != "${ILIAS_ROOT}" ] && [ -e "${LEGACY_SKIN_TARGET}" ]; then
+    echo "Note: ${LEGACY_SKIN_TARGET} exists but ILIAS 10 uses ${ILIAS_WEB_ROOT}/Customizing/skin."
+fi
 
 echo "eFormarine installed in ${SKIN_TARGET}"
 echo "Now run: bash diagnose.sh \"${ILIAS_ROOT}\""

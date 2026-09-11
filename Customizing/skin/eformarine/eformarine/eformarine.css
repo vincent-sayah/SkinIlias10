@@ -1,4 +1,4 @@
-@import url("../../../../templates/default/delos.css");
+@import url("../../../../assets/css/delos.css");
 
 :root {
     --efm-navy-950: #071526;
@@ -460,4 +460,3 @@ body.ilStartupPage .ilStartupSection h1 {
         height: 3px;
     }
 }
-

@@ -67,6 +67,8 @@ LEGACY_SKIN_DIR="${ILIAS_ROOT}/Customizing/skin"
 EFM_DIR="${SKIN_DIR}/eformarine"
 EFM_TEMPLATE="${EFM_DIR}/template.xml"
 EFM_CSS="${EFM_DIR}/eformarine/eformarine.css"
+EFM_UI_LAYOUT="${EFM_DIR}/eformarine/UI/Layout/tpl.standardpage.html"
+EFM_HEADER_ICON="${EFM_DIR}/eformarine/images/logo/HeaderIcon.svg"
 LEGACY_EFM_TEMPLATE="${LEGACY_SKIN_DIR}/eformarine/template.xml"
 
 echo "== eFormarine / ILIAS skin diagnostic =="
@@ -153,6 +155,18 @@ if [ -f "${EFM_CSS}" ]; then
 else
     echo "MISS ${EFM_CSS}"
 fi
+
+if [ -f "${EFM_UI_LAYOUT}" ]; then
+    echo "OK  ${EFM_UI_LAYOUT}"
+else
+    echo "MISS ${EFM_UI_LAYOUT}"
+fi
+
+if [ -f "${EFM_HEADER_ICON}" ]; then
+    echo "OK  ${EFM_HEADER_ICON}"
+else
+    echo "MISS ${EFM_HEADER_ICON}"
+fi
 echo
 
 echo "== eFormarine XML check =="
@@ -183,6 +197,14 @@ if [ -f "${EFM_TEMPLATE}" ]; then
     fi
 else
     echo "SKIP ${EFM_TEMPLATE} is missing"
+fi
+echo
+
+echo "== eFormarine object icons =="
+if [ -d "${EFM_DIR}/eformarine/images" ]; then
+    find "${EFM_DIR}/eformarine/images" -maxdepth 2 -type f \( -name 'icon_*.svg' -o -name 'HeaderIcon.svg' \) -print | sort
+else
+    echo "MISS ${EFM_DIR}/eformarine/images"
 fi
 echo
 

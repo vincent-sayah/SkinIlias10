@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Groupe</title>
+  <rect width="64" height="64" rx="12" fill="#082744"/>
+  <circle cx="32" cy="24" r="8" fill="#f1f8fc"/>
+  <circle cx="19" cy="30" r="6" fill="#5bb7e5"/>
+  <circle cx="45" cy="30" r="6" fill="#5bb7e5"/>
+  <path d="M15 49c2-9 8-13 17-13s15 4 17 13" fill="none" stroke="#c9a646" stroke-width="5" stroke-linecap="round"/>
+</svg>

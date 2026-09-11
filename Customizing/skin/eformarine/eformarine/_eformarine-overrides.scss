@@ -60,3 +60,636 @@ input.btn-primary:focus,
     color: var(--efm-white);
 }
 
+/* eFormarine identity layer */
+:root {
+    --efm-ocean-980: #03101f;
+    --efm-ocean-940: #061a31;
+    --efm-ocean-880: #082744;
+    --efm-steel-700: #2c4968;
+    --efm-sea-500: #0f6ea8;
+    --efm-sea-300: #5bb7e5;
+    --efm-foam-100: #f1f8fc;
+    --efm-gold-600: #b8902e;
+    --efm-copper-700: #8b5b2b;
+    --efm-ruby-600: #b51f2d;
+    --efm-header-gradient: linear-gradient(135deg, #03101f 0%, #082744 58%, #0f6ea8 100%);
+    --efm-panel-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(241, 248, 252, 0.96));
+    --efm-gold-line: linear-gradient(90deg, transparent, #d8ba63 18%, #fff1b8 50%, #d8ba63 82%, transparent);
+}
+
+body.eformarine-ui,
+body {
+    background:
+        radial-gradient(circle at 16% 12%, rgba(91, 183, 229, 0.18), transparent 28rem),
+        linear-gradient(135deg, rgba(3, 16, 31, 0.035) 0 25%, transparent 25% 50%, rgba(3, 16, 31, 0.035) 50% 75%, transparent 75%),
+        var(--efm-surface);
+    background-size: auto, 44px 44px, auto;
+}
+
+.eformarine-topband {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 30px;
+    padding: 0 1.5rem;
+    background: var(--efm-ocean-980);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.eformarine-topband::before {
+    content: "";
+    width: 42px;
+    height: 2px;
+    background: var(--efm-gold-line);
+}
+
+.eformarine-topband span:first-child {
+    color: var(--efm-gold-300);
+}
+
+.il-layout-page > header,
+.eformarine-ui header {
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 38%),
+        var(--efm-header-gradient) !important;
+    border-bottom: 4px solid var(--efm-gold-500);
+    box-shadow: 0 12px 34px rgba(3, 16, 31, 0.22);
+}
+
+.il-layout-page > header .header-inner,
+.eformarine-ui .header-inner {
+    min-height: 74px;
+    color: var(--efm-white);
+}
+
+.header-inner .il-logo,
+.il-layout-page > header .il-logo {
+    color: var(--efm-white);
+}
+
+.header-inner .il-pagetitle,
+.header-inner .il-pagetitle *,
+.il-layout-page > header a {
+    color: var(--efm-white) !important;
+}
+
+.header-inner .il-pagetitle {
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+.header-inner .il-logo::after {
+    content: "Marine nationale";
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    margin-left: 1rem;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid rgba(216, 186, 99, 0.55);
+    border-radius: 999px;
+    color: var(--efm-gold-300);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.il-maincontrols,
+.il-maincontrols-mainbar,
+.il-mainbar {
+    background: var(--efm-ocean-980) !important;
+}
+
+.il-mainbar {
+    border-right: 1px solid rgba(216, 186, 99, 0.28);
+    box-shadow: 10px 0 32px rgba(3, 16, 31, 0.28);
+}
+
+.eformarine-mainbar-brand {
+    display: grid;
+    place-items: center;
+    height: 54px;
+    color: var(--efm-gold-300);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.eformarine-mainbar-brand span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(216, 186, 99, 0.6);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 25%, #174b78, var(--efm-ocean-980));
+}
+
+.il-mainbar-triggers,
+.il-mainbar-tools-button,
+.il-mainbar-tools-entries {
+    background: transparent !important;
+}
+
+.il-mainbar-triggers .btn,
+.il-mainbar-triggers button,
+.il-mainbar-triggers a,
+.il-mainbar-entries > li > *,
+.il-mainbar .btn-bulky,
+.il-mainbar .link-bulky,
+.il-mainbar-tools-button .btn {
+    background: transparent !important;
+    border: 0 !important;
+    border-left: 4px solid transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.il-mainbar-triggers .btn:hover,
+.il-mainbar-triggers .btn:focus,
+.il-mainbar-triggers button:hover,
+.il-mainbar-triggers button:focus,
+.il-mainbar-triggers a:hover,
+.il-mainbar-triggers a:focus,
+.il-mainbar-entries > li > *:hover,
+.il-mainbar-entries > li > *:focus,
+.il-mainbar .btn-bulky:hover,
+.il-mainbar .btn-bulky:focus,
+.il-mainbar .link-bulky:hover,
+.il-mainbar .link-bulky:focus,
+.il-mainbar [aria-expanded="true"] {
+    background: linear-gradient(90deg, rgba(216, 186, 99, 0.2), rgba(15, 110, 168, 0.28)) !important;
+    border-left-color: var(--efm-gold-500) !important;
+    color: var(--efm-white) !important;
+}
+
+.il-mainbar-triggers .btn img,
+.il-mainbar-triggers .btn svg,
+.il-mainbar-triggers button img,
+.il-mainbar-triggers button svg,
+.il-mainbar a img,
+.il-mainbar a svg {
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+}
+
+.il-mainbar-triggers .btn:hover img,
+.il-mainbar-triggers .btn:hover svg,
+.il-mainbar-triggers button:hover img,
+.il-mainbar-triggers button:hover svg,
+.il-mainbar a:hover img,
+.il-mainbar a:hover svg {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(48%) saturate(451%) hue-rotate(3deg) brightness(96%) contrast(93%);
+}
+
+.il-mainbar-slates,
+.il-metabar-slates {
+    background: linear-gradient(180deg, #ffffff, var(--efm-foam-100));
+    border-color: rgba(7, 21, 38, 0.12);
+    box-shadow: 0 24px 50px rgba(3, 16, 31, 0.2);
+}
+
+.il-maincontrols-metabar,
+.eformarine-metabar {
+    gap: 0.35rem;
+}
+
+.il-maincontrols-metabar > li > .btn,
+.il-maincontrols-metabar > li > button,
+.il-maincontrols-metabar > li > a,
+.eformarine-metabar > li > .btn,
+.eformarine-metabar > li > button,
+.eformarine-metabar > li > a {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--efm-white) !important;
+}
+
+.il-maincontrols-metabar > li > .btn:hover,
+.il-maincontrols-metabar > li > button:hover,
+.il-maincontrols-metabar > li > a:hover {
+    background: rgba(216, 186, 99, 0.18) !important;
+    border-color: rgba(216, 186, 99, 0.65) !important;
+}
+
+.breadcrumb-wrapper,
+.breadcrumbs {
+    margin: 0.7rem 0 1rem;
+}
+
+.eformarine-breadcrumbs,
+.breadcrumb-wrapper .breadcrumb,
+.breadcrumbs .breadcrumb,
+.il-header-locator .breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    max-width: 100%;
+    padding: 0.45rem 0.75rem;
+    background: rgba(7, 21, 38, 0.06);
+    border: 1px solid rgba(7, 21, 38, 0.1);
+    border-radius: 999px;
+}
+
+.eformarine-breadcrumb-label {
+    display: inline-flex;
+    align-items: center;
+    color: var(--efm-gold-600);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.breadcrumb-crumb a,
+.breadcrumb a,
+.il-header-locator a {
+    color: var(--efm-ocean-880) !important;
+    font-weight: 700;
+}
+
+.breadcrumb-separator::before,
+.breadcrumb > li + li::before {
+    color: var(--efm-gold-600) !important;
+    content: ">";
+    font-weight: 900;
+}
+
+.nav-tabs,
+.ilTabs,
+.ilTab,
+.ilc_page_tnav_TopNavigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.35rem;
+    background: rgba(7, 21, 38, 0.05);
+    border: 1px solid rgba(7, 21, 38, 0.08);
+    border-radius: 10px;
+}
+
+.nav-tabs > li > a,
+.ilTabs a,
+.ilTab a,
+.ilc_page_tnav_TopNavigation a {
+    border: 0 !important;
+    border-radius: 7px !important;
+    color: var(--efm-ocean-880);
+    font-weight: 800;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.ilTabActive,
+.ilTabs .active a,
+.ilc_page_tnav_TopNavigation .ilc_page_tnavlink_Active {
+    background: var(--efm-ocean-880) !important;
+    border: 0 !important;
+    box-shadow: inset 0 -3px 0 var(--efm-gold-500);
+    color: var(--efm-white) !important;
+}
+
+.nav-tabs > li > a:hover,
+.ilTabs a:hover,
+.ilTab a:hover,
+.ilc_page_tnav_TopNavigation a:hover {
+    background: rgba(15, 110, 168, 0.12) !important;
+    color: var(--efm-ocean-980) !important;
+}
+
+.il-card.thumbnail,
+.thumbnail.il-card,
+.ilContainerListItemOuter,
+.ilObjListRow {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(7, 21, 38, 0.12) !important;
+    border-radius: 8px !important;
+    background: var(--efm-panel-gradient) !important;
+    box-shadow: 0 12px 28px rgba(7, 21, 38, 0.1);
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.il-card.thumbnail::before,
+.ilContainerListItemOuter::before,
+.ilObjListRow::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+    background: var(--efm-gold-line);
+}
+
+.il-card.thumbnail:hover,
+.ilContainerListItemOuter:hover,
+.ilObjListRow:hover {
+    transform: translateY(-2px);
+    border-color: rgba(15, 110, 168, 0.38) !important;
+    box-shadow: 0 18px 42px rgba(7, 21, 38, 0.16);
+}
+
+.eformarine-card-watermark {
+    position: absolute;
+    right: -28px;
+    bottom: -28px;
+    width: 126px;
+    height: 126px;
+    border: 1px solid rgba(184, 144, 46, 0.24);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(184, 144, 46, 0.14), transparent 62%),
+        repeating-conic-gradient(from 12deg, rgba(7, 21, 38, 0.08) 0 8deg, transparent 8deg 16deg);
+    pointer-events: none;
+}
+
+.il-card-image-container {
+    position: relative;
+    min-height: 118px;
+    background:
+        linear-gradient(135deg, rgba(3, 16, 31, 0.94), rgba(15, 110, 168, 0.86)),
+        var(--efm-ocean-880) !important;
+    display: grid;
+    place-items: center;
+}
+
+.il-card-image-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.18), transparent 22%),
+        repeating-linear-gradient(-18deg, transparent 0 18px, rgba(255, 255, 255, 0.06) 18px 20px);
+}
+
+.il-card-image-container::after {
+    content: "eForm Marine";
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.65rem;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.il-card-image-container img {
+    position: relative;
+    z-index: 1;
+    max-height: 86px;
+    object-fit: cover;
+}
+
+.il-card-repository-head {
+    position: relative;
+    z-index: 2;
+    min-height: 46px;
+    background: rgba(3, 16, 31, 0.96) !important;
+    border-bottom: 1px solid rgba(216, 186, 99, 0.34);
+    color: var(--efm-white);
+}
+
+.il-card-repository-head img,
+.il-card img[src*="icon_"],
+.ilObjListRow img[src*="icon_"],
+.ilContainerListItemOuter img[src*="icon_"] {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid rgba(216, 186, 99, 0.42);
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--efm-ocean-940), var(--efm-sea-500));
+    box-shadow: 0 8px 18px rgba(3, 16, 31, 0.18);
+}
+
+.il-card .card-title,
+.il-card .caption.card-title {
+    position: relative;
+    z-index: 2;
+    padding-top: 0.8rem;
+    color: var(--efm-ocean-980);
+    font-weight: 900;
+}
+
+.il-card .card-title a,
+.il-card .caption.card-title a {
+    color: var(--efm-ocean-980) !important;
+}
+
+.il-card .caption:not(.card-title) {
+    position: relative;
+    z-index: 2;
+    color: var(--efm-muted);
+}
+
+.il-card:has(img[src*="icon_crs"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_crs"])::before {
+    background: linear-gradient(135deg, #03101f, #0f6ea8) !important;
+}
+
+.il-card:has(img[src*="icon_cat"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_cat"])::before {
+    background: linear-gradient(135deg, #071526, #2c4968) !important;
+}
+
+.il-card:has(img[src*="icon_grp"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_grp"])::before {
+    background: linear-gradient(135deg, #082744, #5bb7e5) !important;
+}
+
+.il-card:has(img[src*="icon_fold"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_fold"])::before {
+    background: linear-gradient(135deg, #12385c, #b8902e) !important;
+}
+
+.il-card:has(img[src*="icon_file"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_file"])::before {
+    background: linear-gradient(135deg, #2c4968, #f1f8fc) !important;
+}
+
+.il-card:has(img[src*="icon_tst"]) .il-card-image-container,
+.il-card:has(img[src*="icon_qpl"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_tst"])::before,
+.ilObjListRow:has(img[src*="icon_qpl"])::before {
+    background: linear-gradient(135deg, #061a31, #b51f2d) !important;
+}
+
+.il-card:has(img[src*="icon_frm"]) .il-card-image-container,
+.il-card:has(img[src*="icon_blog"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_frm"])::before,
+.ilObjListRow:has(img[src*="icon_blog"])::before {
+    background: linear-gradient(135deg, #082744, #8b5b2b) !important;
+}
+
+.il-card:has(img[src*="icon_lm"]) .il-card-image-container,
+.il-card:has(img[src*="icon_htlm"]) .il-card-image-container,
+.il-card:has(img[src*="icon_sahs"]) .il-card-image-container,
+.il-card:has(img[src*="icon_lso"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_lm"])::before,
+.ilObjListRow:has(img[src*="icon_htlm"])::before,
+.ilObjListRow:has(img[src*="icon_sahs"])::before,
+.ilObjListRow:has(img[src*="icon_lso"])::before {
+    background: linear-gradient(135deg, #03101f, #174b78 45%, #c9a646) !important;
+}
+
+.il-card:has(img[src*="icon_exc"]) .il-card-image-container,
+.il-card:has(img[src*="icon_wiki"]) .il-card-image-container,
+.il-card:has(img[src*="icon_sess"]) .il-card-image-container,
+.ilObjListRow:has(img[src*="icon_exc"])::before,
+.ilObjListRow:has(img[src*="icon_wiki"])::before,
+.ilObjListRow:has(img[src*="icon_sess"])::before {
+    background: linear-gradient(135deg, #0a1f35, #0f6ea8 52%, #d8ba63) !important;
+}
+
+.il-card:has(img[src*="icon_crs"]) .card-title::before { content: "COURS"; }
+.il-card:has(img[src*="icon_cat"]) .card-title::before { content: "CATEGORIE"; }
+.il-card:has(img[src*="icon_grp"]) .card-title::before { content: "GROUPE"; }
+.il-card:has(img[src*="icon_fold"]) .card-title::before { content: "DOSSIER"; }
+.il-card:has(img[src*="icon_file"]) .card-title::before { content: "DOCUMENT"; }
+.il-card:has(img[src*="icon_tst"]) .card-title::before { content: "TEST"; }
+.il-card:has(img[src*="icon_frm"]) .card-title::before { content: "FORUM"; }
+.il-card:has(img[src*="icon_lm"]) .card-title::before { content: "MODULE"; }
+.il-card:has(img[src*="icon_htlm"]) .card-title::before { content: "WEB"; }
+.il-card:has(img[src*="icon_sahs"]) .card-title::before { content: "SCORM"; }
+.il-card:has(img[src*="icon_exc"]) .card-title::before { content: "EXERCICE"; }
+.il-card:has(img[src*="icon_wiki"]) .card-title::before { content: "WIKI"; }
+.il-card:has(img[src*="icon_blog"]) .card-title::before { content: "BLOG"; }
+.il-card:has(img[src*="icon_sess"]) .card-title::before { content: "SESSION"; }
+.il-card:has(img[src*="icon_qpl"]) .card-title::before { content: "QUESTIONS"; }
+
+.il-card .card-title::before,
+.il-card .caption.card-title::before {
+    display: inline-flex;
+    margin: 0 0.45rem 0.35rem 0;
+    padding: 0.18rem 0.42rem;
+    border-radius: 999px;
+    background: rgba(184, 144, 46, 0.15);
+    color: var(--efm-gold-600);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.ilToolbar,
+.il-standard-form,
+.ilForm,
+.il_Block,
+.panel,
+.card:not(.il-card),
+.ilInfoScreenSec {
+    background: var(--efm-panel-gradient) !important;
+    border: 1px solid rgba(7, 21, 38, 0.11) !important;
+    border-radius: 8px !important;
+}
+
+.il_Block .ilBlockHeader,
+.panel-heading,
+.card-header,
+.ilTableHeaderTitle,
+.ilHeader {
+    background: linear-gradient(90deg, rgba(7, 21, 38, 0.08), rgba(15, 110, 168, 0.08));
+    color: var(--efm-ocean-940);
+    font-weight: 900;
+}
+
+.table > thead > tr > th,
+.ilTableHeader,
+.ilTableHeaderTitle {
+    background: linear-gradient(90deg, var(--efm-ocean-940), var(--efm-ocean-880)) !important;
+    color: var(--efm-white) !important;
+}
+
+.table > thead > tr > th a,
+.ilTableHeader a,
+.ilTableHeaderTitle a {
+    color: var(--efm-white) !important;
+}
+
+.btn-primary,
+.il-btn-primary,
+.btn.btn-primary {
+    background: linear-gradient(135deg, var(--efm-ocean-880), var(--efm-sea-500)) !important;
+    border-color: var(--efm-ocean-880) !important;
+    box-shadow: inset 0 -2px 0 rgba(3, 16, 31, 0.28);
+}
+
+.btn-primary:hover,
+.il-btn-primary:hover,
+.btn.btn-primary:hover {
+    background: linear-gradient(135deg, var(--efm-ocean-940), var(--efm-ocean-880)) !important;
+}
+
+.btn-default,
+.btn-secondary,
+.btn.btn-default,
+.btn.btn-secondary {
+    border-color: rgba(15, 110, 168, 0.32) !important;
+    color: var(--efm-ocean-880) !important;
+}
+
+.alert,
+.ilMessageBox,
+.ilMessageBoxInfo,
+.ilMessageBoxSuccess,
+.ilMessageBoxWarning,
+.ilMessageBoxFailure,
+.ilMessageBoxError {
+    border-radius: 8px !important;
+    border-left-width: 5px !important;
+    box-shadow: 0 10px 24px rgba(7, 21, 38, 0.08);
+}
+
+body.il-layout-page-login .ilStartupSection,
+body.ilStartupPage .ilStartupSection {
+    border: 1px solid rgba(216, 186, 99, 0.34);
+    border-top: 6px solid var(--efm-gold-500);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 248, 252, 0.96));
+}
+
+@media (max-width: 768px) {
+    .eformarine-topband {
+        justify-content: center;
+        min-height: 24px;
+        padding: 0 0.75rem;
+        font-size: 0.65rem;
+    }
+
+    .eformarine-topband span:last-child,
+    .header-inner .il-logo::after {
+        display: none;
+    }
+
+    .il-layout-page > header .header-inner,
+    .eformarine-ui .header-inner {
+        min-height: 58px;
+    }
+
+    .il-card-image-container {
+        min-height: 88px;
+    }
+}
+
+body.eformarine-ui.il-layout-page-login,
+body.eformarine-ui.ilStartupPage,
+body.il-layout-page-login,
+body.ilStartupPage {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(91, 183, 229, 0.26), transparent 24rem),
+        radial-gradient(circle at 78% 12%, rgba(201, 166, 70, 0.18), transparent 20rem),
+        linear-gradient(135deg, var(--efm-ocean-980), var(--efm-ocean-880)) !important;
+}

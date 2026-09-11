@@ -4,6 +4,8 @@ Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale
 
 Le depot contient un skin installable dans `public/Customizing/skin/eformarine` pour ILIAS 10, avec un style unique : `eFormarine - Marine nationale`.
 
+La version `1.1.0` ajoute une personnalisation plus marquee : barre haute, barre laterale, fil d'Ariane, onglets, tuiles, cartes repository, icones d'objets et quelques templates HTML UI.
+
 ## Structure
 
 ```text
@@ -16,6 +18,7 @@ Customizing/
         eformarine.scss
         010-settings/
         images/
+        UI/
         fonts/
         sound/
 docs/
@@ -30,6 +33,7 @@ Le skin suit la structure lue dans la branche officielle `release_10` d'ILIAS :
 - `public/Customizing/skin/<skin_id>/template.xml`
 - `public/Customizing/skin/<skin_id>/<style_id>/<css_file>.css`
 - style declare dans `template.xml` avec `id`, `name`, `image_directory`, `css_file`, `sound_directory` et `font_directory`
+- overrides HTML possibles sous `public/Customizing/skin/<skin_id>/<style_id>/UI/...`
 
 La base Delos reste importee par `eformarine.css`, puis les surcharges Marine nationale sont appliquees.
 
@@ -69,6 +73,8 @@ Puis, dans ILIAS :
 La procedure detaillee est dans [docs/INSTALL.md](docs/INSTALL.md).
 
 Si ILIAS affiche une ligne `other`, ce n'est pas le skin eFormarine : ILIAS l'ajoute quand un utilisateur est affecte a un style qui n'existe plus. Lance `bash diagnose.sh /var/www/html/ilias` pour verifier que les fichiers eFormarine sont bien au bon endroit.
+
+Apres une mise a jour du skin, vide le cache ILIAS et recharge le navigateur sans cache. Les overrides HTML peuvent necessiter un redemarrage de PHP-FPM/Apache.
 
 ## Apercu
 

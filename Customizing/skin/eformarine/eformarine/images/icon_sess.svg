@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Session</title>
+  <rect width="64" height="64" rx="12" fill="#0a1f35"/>
+  <rect x="13" y="16" width="38" height="35" rx="5" fill="#f1f8fc"/>
+  <path d="M13 26h38" stroke="#0f6ea8" stroke-width="4"/>
+  <path d="M22 12v9M42 12v9" stroke="#c9a646" stroke-width="4" stroke-linecap="round"/>
+  <path d="M23 36h6M35 36h6M23 44h6M35 44h6" stroke="#082744" stroke-width="3" stroke-linecap="round"/>
+</svg>

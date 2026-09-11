@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">eFormarine mark</title>
+  <desc id="desc">Stylized navy blue and gold compass mark for the eFormarine ILIAS skin.</desc>
+  <defs>
+    <linearGradient id="sea" x1="34" y1="28" x2="220" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#174b78"/>
+      <stop offset="1" stop-color="#071526"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="112" fill="url(#sea)"/>
+  <circle cx="128" cy="128" r="96" fill="none" stroke="#c9a646" stroke-width="8"/>
+  <path d="M128 36l19 73 73 19-73 19-19 73-19-73-73-19 73-19z" fill="#ffffff"/>
+  <path d="M128 73l12 43 43 12-43 12-12 43-12-43-43-12 43-12z" fill="#c9a646"/>
+  <circle cx="128" cy="128" r="15" fill="#071526"/>
+  <circle cx="128" cy="128" r="6" fill="#ffffff"/>
+</svg>
+

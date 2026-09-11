@@ -1,0 +1,62 @@
+:root {
+    --efm-navy-950: #071526;
+    --efm-navy-900: #0a1f35;
+    --efm-navy-800: #12385c;
+    --efm-navy-700: #174b78;
+    --efm-blue-500: #2f80c4;
+    --efm-blue-100: #eaf4fb;
+    --efm-gold-500: #c9a646;
+    --efm-gold-300: #e2c86c;
+    --efm-red-600: #c9292e;
+    --efm-white: #ffffff;
+    --efm-ink: #1b2634;
+    --efm-muted: #5d6b7c;
+    --efm-line: #d9e2ec;
+    --efm-surface: #f6f8fb;
+    --efm-radius: 6px;
+    --efm-shadow: 0 12px 28px rgba(7, 21, 38, 0.12);
+}
+
+body {
+    background: var(--efm-surface);
+    color: var(--efm-ink);
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--efm-navy-700);
+}
+
+a:hover,
+a:focus {
+    color: var(--efm-blue-500);
+}
+
+.btn-primary,
+.btn.btn-primary,
+button.btn-primary,
+input.btn-primary,
+.il-btn-primary {
+    background: var(--efm-navy-800);
+    border-color: var(--efm-navy-800);
+    border-radius: var(--efm-radius);
+    color: var(--efm-white);
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+button.btn-primary:hover,
+button.btn-primary:focus,
+input.btn-primary:hover,
+input.btn-primary:focus,
+.il-btn-primary:hover,
+.il-btn-primary:focus {
+    background: var(--efm-navy-700);
+    border-color: var(--efm-navy-700);
+    color: var(--efm-white);
+}
+

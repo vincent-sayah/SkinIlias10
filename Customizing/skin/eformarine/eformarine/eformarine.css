@@ -1,0 +1,463 @@
+@import url("../../../../templates/default/delos.css");
+
+:root {
+    --efm-navy-950: #071526;
+    --efm-navy-900: #0a1f35;
+    --efm-navy-800: #12385c;
+    --efm-navy-700: #174b78;
+    --efm-blue-500: #2f80c4;
+    --efm-blue-100: #eaf4fb;
+    --efm-gold-500: #c9a646;
+    --efm-gold-300: #e2c86c;
+    --efm-red-600: #c9292e;
+    --efm-white: #ffffff;
+    --efm-ink: #1b2634;
+    --efm-muted: #5d6b7c;
+    --efm-line: #d9e2ec;
+    --efm-surface: #f6f8fb;
+    --efm-radius: 6px;
+    --efm-shadow: 0 12px 28px rgba(7, 21, 38, 0.12);
+}
+
+html,
+body {
+    background: var(--efm-surface);
+    color: var(--efm-ink);
+}
+
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--efm-navy-950), var(--efm-blue-500) 50%, var(--efm-gold-500));
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--efm-navy-700);
+}
+
+a:hover,
+a:focus {
+    color: var(--efm-blue-500);
+}
+
+::selection {
+    color: var(--efm-white);
+    background: var(--efm-navy-800);
+}
+
+.il-maincontrols,
+.il-mainbar,
+.il-metabar,
+.ilTopBar,
+#ilTopBar,
+#ilTopNav,
+.navbar-inverse,
+.navbar-default.ilMainHeader {
+    background: linear-gradient(180deg, var(--efm-navy-900), var(--efm-navy-950));
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--efm-white);
+}
+
+.il-maincontrols a,
+.il-mainbar a,
+.il-metabar a,
+#ilTopBar a,
+#ilTopNav a,
+.navbar-inverse a,
+.navbar-default.ilMainHeader a {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.il-maincontrols a:hover,
+.il-maincontrols a:focus,
+.il-mainbar a:hover,
+.il-mainbar a:focus,
+.il-metabar a:hover,
+.il-metabar a:focus,
+#ilTopBar a:hover,
+#ilTopBar a:focus,
+#ilTopNav a:hover,
+#ilTopNav a:focus {
+    color: var(--efm-gold-300);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.il-logo,
+.ilMainHeader .il-logo,
+#il_startup_logo,
+.ilStartupLogo {
+    filter: saturate(0.92) contrast(1.05);
+}
+
+.il-maincontrols .il-mainbar-triggers .btn,
+.il-maincontrols button,
+.il-metabar .btn {
+    border-radius: var(--efm-radius);
+}
+
+.breadcrumb,
+.il-breadcrumb,
+.ilLocator {
+    background: transparent;
+    border: 0;
+    color: var(--efm-muted);
+}
+
+.breadcrumb a,
+.il-breadcrumb a,
+.ilLocator a {
+    color: var(--efm-navy-700);
+}
+
+.ilToolbar,
+.ilAccHeadingHidden,
+.ilTabsContentOuter,
+.ilStartupSection,
+.il_Block,
+.ilInfoScreenSec,
+.il-card,
+.card,
+.panel,
+.il-panel-listing-std-container,
+.il-standard-form,
+.ilForm,
+.ilContainerListItemOuter,
+.ilObjListRow {
+    border-color: var(--efm-line);
+    border-radius: var(--efm-radius);
+    box-shadow: none;
+}
+
+.ilToolbar,
+.il-panel-listing-std-container,
+.il_Block,
+.ilInfoScreenSec,
+.panel,
+.card {
+    background: var(--efm-white);
+}
+
+.il_Block .ilBlockHeader,
+.panel-heading,
+.card-header,
+.ilTableHeaderTitle,
+.ilHeader {
+    border-color: var(--efm-line);
+}
+
+h1,
+.ilHeader h1,
+.ilHeaderDesc h1 {
+    color: var(--efm-navy-900);
+    font-weight: 700;
+}
+
+h2,
+h3,
+.panel-title,
+.ilBlockHeader {
+    color: var(--efm-navy-800);
+}
+
+.il_HeaderInner,
+.ilHeaderDesc,
+.ilHeader {
+    border-bottom-color: var(--efm-line);
+}
+
+.btn-primary,
+.btn.btn-primary,
+button.btn-primary,
+input.btn-primary,
+.il-btn-primary {
+    background: var(--efm-navy-800);
+    border-color: var(--efm-navy-800);
+    border-radius: var(--efm-radius);
+    color: var(--efm-white);
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+button.btn-primary:hover,
+button.btn-primary:focus,
+input.btn-primary:hover,
+input.btn-primary:focus,
+.il-btn-primary:hover,
+.il-btn-primary:focus {
+    background: var(--efm-navy-700);
+    border-color: var(--efm-navy-700);
+    color: var(--efm-white);
+}
+
+.btn-default,
+.btn.btn-default,
+.btn-secondary,
+.btn.btn-secondary,
+button.btn-default,
+input.btn-default {
+    background: var(--efm-white);
+    border-color: var(--efm-line);
+    border-radius: var(--efm-radius);
+    color: var(--efm-navy-800);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn-secondary:hover,
+.btn-secondary:focus,
+button.btn-default:hover,
+button.btn-default:focus,
+input.btn-default:hover,
+input.btn-default:focus {
+    background: var(--efm-blue-100);
+    border-color: var(--efm-blue-500);
+    color: var(--efm-navy-900);
+}
+
+.btn-link,
+.il-btn-link {
+    color: var(--efm-navy-700);
+}
+
+.nav-tabs,
+.ilTab,
+.ilTabs {
+    border-bottom-color: var(--efm-line);
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.ilTabActive,
+.ilTabs .active a {
+    border-color: var(--efm-line);
+    border-top: 3px solid var(--efm-gold-500);
+    color: var(--efm-navy-900);
+    font-weight: 700;
+}
+
+.nav-tabs > li > a:hover,
+.ilTabs a:hover {
+    border-color: var(--efm-blue-100);
+    color: var(--efm-navy-800);
+}
+
+table,
+.table,
+.ilTableOuter {
+    border-color: var(--efm-line);
+}
+
+.table > thead > tr > th,
+.ilTableHeaderTitle,
+.ilTableHeader,
+.ilTableFootLight {
+    background: var(--efm-blue-100);
+    color: var(--efm-navy-900);
+    border-color: var(--efm-line);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd),
+.ilObjListRow:nth-child(odd) {
+    background-color: rgba(234, 244, 251, 0.42);
+}
+
+.alert-success,
+.ilMessageBoxSuccess {
+    background: #edf8f1;
+    border-color: #9ed4b1;
+    color: #205735;
+}
+
+.alert-info,
+.ilMessageBoxInfo {
+    background: var(--efm-blue-100);
+    border-color: #a5cde9;
+    color: var(--efm-navy-800);
+}
+
+.alert-warning,
+.ilMessageBoxWarning {
+    background: #fff7de;
+    border-color: var(--efm-gold-300);
+    color: #6e5511;
+}
+
+.alert-danger,
+.ilMessageBoxFailure,
+.ilMessageBoxError {
+    background: #fff0f0;
+    border-color: #f0b5b7;
+    color: #862025;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea,
+select,
+.form-control {
+    border-color: #c7d3df;
+    border-radius: var(--efm-radius);
+    box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+    border-color: var(--efm-blue-500);
+    box-shadow: 0 0 0 3px rgba(47, 128, 196, 0.18);
+}
+
+.progress {
+    background: #e8eef5;
+    border-radius: 999px;
+    box-shadow: none;
+}
+
+.progress-bar,
+.progress-bar-success {
+    background: linear-gradient(90deg, var(--efm-navy-800), var(--efm-blue-500));
+}
+
+.label-primary,
+.badge-primary,
+.ilBadge {
+    background: var(--efm-navy-800);
+}
+
+.label-warning,
+.badge-warning {
+    background: var(--efm-gold-500);
+    color: var(--efm-navy-950);
+}
+
+.il-card,
+.card,
+.panel {
+    overflow: hidden;
+}
+
+.il-card:hover,
+.card:hover,
+.ilObjListRow:hover,
+.ilContainerListItemOuter:hover {
+    border-color: #b6c7d7;
+    box-shadow: 0 10px 24px rgba(7, 21, 38, 0.08);
+}
+
+.il-item-title,
+.ilListItemSectionTitle,
+.il_ContainerItemTitle,
+.il-card h3,
+.il-card h4 {
+    color: var(--efm-navy-900);
+    font-weight: 700;
+}
+
+.il-item-description,
+.ilListItemSectionDescription,
+.il_Description,
+.small,
+small {
+    color: var(--efm-muted);
+}
+
+.ilCLI,
+.ilCOPagePres,
+.ilc_page_frame_PageFrame {
+    color: var(--efm-ink);
+}
+
+.ilc_page_tnav_TopNavigation,
+.ilc_section_Headline,
+.ilc_text_block_Standard {
+    border-color: var(--efm-line);
+}
+
+.ilc_section_Headline {
+    color: var(--efm-navy-900);
+}
+
+.ilStartupFrame,
+.ilStartupSection {
+    box-shadow: var(--efm-shadow);
+}
+
+body.il-layout-page-login,
+body.ilStartupPage {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(47, 128, 196, 0.22), transparent 28%),
+        linear-gradient(135deg, var(--efm-navy-950), var(--efm-navy-800));
+}
+
+body.il-layout-page-login .ilStartupSection,
+body.ilStartupPage .ilStartupSection {
+    border-top: 4px solid var(--efm-gold-500);
+}
+
+body.il-layout-page-login .ilStartupSection h1,
+body.ilStartupPage .ilStartupSection h1 {
+    color: var(--efm-navy-950);
+}
+
+.eformarine-brand,
+.eformarine-banner {
+    background: linear-gradient(135deg, var(--efm-navy-900), var(--efm-navy-700));
+    border-radius: var(--efm-radius);
+    color: var(--efm-white);
+    padding: 1.5rem;
+}
+
+.eformarine-brand a,
+.eformarine-banner a {
+    color: var(--efm-gold-300);
+}
+
+.eformarine-callout {
+    background: var(--efm-blue-100);
+    border-left: 4px solid var(--efm-gold-500);
+    border-radius: var(--efm-radius);
+    color: var(--efm-navy-900);
+    padding: 1rem 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .ilToolbar,
+    .il_Block,
+    .panel,
+    .card,
+    .il-card {
+        border-radius: 4px;
+    }
+
+    body::before {
+        height: 3px;
+    }
+}
+

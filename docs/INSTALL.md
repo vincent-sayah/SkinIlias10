@@ -19,6 +19,14 @@ find Customizing/skin/eformarine -type f -exec chmod 644 {} \;
 
 Adapte `/var/www/html/ilias` si ton installation ILIAS est ailleurs.
 
+Ou utilise le script fourni :
+
+```bash
+cd /tmp/SkinIlias10
+bash install.sh /var/www/html/ilias
+bash diagnose.sh /var/www/html/ilias
+```
+
 ## Activation dans ILIAS
 
 1. Connecte-toi avec un compte administrateur.
@@ -45,6 +53,21 @@ Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
 ```
 
 Verifie aussi que le fichier XML est lisible par Apache/PHP-FPM, puis vide le cache ILIAS depuis l'administration.
+
+La ligne `other` dans le tableau ILIAS n'est pas un skin installe. ILIAS l'affiche lorsqu'au moins un utilisateur est encore affecte a un style qui n'existe plus. Pour confirmer l'installation d'eFormarine :
+
+```bash
+cd /tmp/SkinIlias10
+git pull
+bash install.sh /var/www/html/ilias
+bash diagnose.sh /var/www/html/ilias
+```
+
+Si le diagnostic indique `MISS components/ILIAS` ou `MISS templates/default/template.xml`, tu n'as pas donne la bonne racine ILIAS au script. Recherche alors la bonne racine :
+
+```bash
+find /var/www -maxdepth 5 -type f -path '*/templates/default/template.xml' -print
+```
 
 ## Mise a jour
 

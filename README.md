@@ -48,6 +48,7 @@ git clone https://github.com/vincent-sayah/SkinIlias10.git
 
 cd SkinIlias10
 bash install.sh /var/www/html/ilias
+bash diagnose.sh /var/www/html/ilias
 ```
 
 Puis, dans ILIAS :
@@ -58,6 +59,8 @@ Puis, dans ILIAS :
 4. Le definir comme style par defaut si necessaire.
 
 La procedure detaillee est dans [docs/INSTALL.md](docs/INSTALL.md).
+
+Si ILIAS affiche une ligne `other`, ce n'est pas le skin eFormarine : ILIAS l'ajoute quand un utilisateur est affecte a un style qui n'existe plus. Lance `bash diagnose.sh /var/www/html/ilias` pour verifier que les fichiers eFormarine sont bien au bon endroit.
 
 ## Apercu
 

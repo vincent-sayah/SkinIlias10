@@ -1,10 +1,10 @@
 # SkinIlias10 - eFormarine
 
-Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale.
+Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale et de la palette du site La Marine recrute.
 
 Le depot contient un skin installable dans `public/Customizing/skin/eformarine` pour ILIAS 10, avec un style unique : `eFormarine - Marine nationale`.
 
-La version `1.1.1` garde une personnalisation visible mais corrige la mise en page : barre laterale native preservee, plus de grand bandeau bleu, barre haute plus sobre, fil d'Ariane, onglets, tuiles, cartes repository et icones d'objets restyles.
+La version `1.1.2` garde la structure native ILIAS et concentre la personnalisation sur le CSS et les icones : barre laterale bleu marine avec accent rouge, barre haute sobre, fil d'Ariane, onglets, tuiles, cartes repository, menus d'action non tronques et icones d'objets sans fond colore en vue liste.
 
 ## Structure
 
@@ -18,7 +18,6 @@ Customizing/
         eformarine.scss
         010-settings/
         images/
-        UI/
         fonts/
         sound/
 docs/
@@ -33,9 +32,9 @@ Le skin suit la structure lue dans la branche officielle `release_10` d'ILIAS :
 - `public/Customizing/skin/<skin_id>/template.xml`
 - `public/Customizing/skin/<skin_id>/<style_id>/<css_file>.css`
 - style declare dans `template.xml` avec `id`, `name`, `image_directory`, `css_file`, `sound_directory` et `font_directory`
-- override HTML limite a la carte UI sous `public/Customizing/skin/<skin_id>/<style_id>/UI/Card/...`
+- pas d'override HTML UI actif, afin de ne pas perturber le layout, les tuiles ou la bascule liste/tuile d'ILIAS
 
-La base Delos reste importee par `eformarine.css`, puis les surcharges Marine nationale sont appliquees.
+La base Delos reste importee par `eformarine.css`, puis les surcharges eFormarine sont appliquees.
 
 Sources principales :
 

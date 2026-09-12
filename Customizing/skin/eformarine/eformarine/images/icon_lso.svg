@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Sequence</title>
-  <rect width="64" height="64" rx="12" fill="#082744"/>
-  <path d="M17 18h14v12H17zM33 18h14v12H33zM17 36h14v12H17zM33 36h14v12H33z" fill="#f1f8fc"/>
-  <path d="M31 24h2M31 42h2M40 30v6M24 30v6" stroke="#c9a646" stroke-width="3" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M17 18h14v12H17zM33 18h14v12H33zM17 36h14v12H17zM33 36h14v12H33z" fill="#001b39"/>
+  <path d="M31 24h2M31 42h2M40 30v6M24 30v6" stroke="#d60725" stroke-width="3" stroke-linecap="round"/>
 </svg>

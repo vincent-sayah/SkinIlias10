@@ -62,7 +62,6 @@ public/Customizing/skin/eformarine/template.xml
 public/Customizing/skin/eformarine/eformarine/eformarine.css
 public/Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
 public/Customizing/skin/eformarine/eformarine/images/logo/HeaderIcon.svg
-public/Customizing/skin/eformarine/eformarine/UI/Card/tpl.card.html
 ```
 
 Verifie aussi que le fichier XML est lisible par Apache/PHP-FPM, puis vide le cache ILIAS depuis l'administration.
@@ -84,6 +83,8 @@ bash /tmp/SkinIlias10/diagnose.sh auto
 
 Si le diagnostic indique que les fichiers eFormarine sont presents mais que l'interface ne les affiche toujours pas, redemarre le service PHP-FPM et le serveur web, puis vide le cache ILIAS.
 
+La version `1.1.2` ne doit afficher aucun template sous `public/Customizing/skin/eformarine/eformarine/UI`. Si `diagnose.sh` signale un override HTML, relance `install.sh` : il remplace le dossier complet du skin et supprime les anciens fichiers qui pouvaient casser la vue tuile/liste.
+
 ## Mise a jour
 
 ```bash
@@ -99,4 +100,4 @@ cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
 chown -R apache:apache public/Customizing/skin/eformarine
 ```
 
-Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si les templates HTML ne changent pas tout de suite, et recharge la page avec le cache navigateur ignore. La version `1.1.1` supprime les anciens overrides HTML globaux : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.
+Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si necessaire, et recharge la page avec le cache navigateur ignore. La version `1.1.2` supprime tous les anciens overrides HTML UI : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Module ILIAS</title>
-  <rect width="64" height="64" rx="12" fill="#03101f"/>
-  <path d="M15 17c6-3 12-3 17 1 5-4 11-4 17-1v31c-6-3-12-3-17 1-5-4-11-4-17-1V17z" fill="#f1f8fc"/>
-  <path d="M32 18v31M21 27h7M21 35h7M36 27h7M36 35h7" stroke="#0f6ea8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M15 49c7-4 12-4 17 0s10 4 17 0" fill="none" stroke="#c9a646" stroke-width="3" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M15 17c6-3 12-3 17 1 5-4 11-4 17-1v31c-6-3-12-3-17 1-5-4-11-4-17-1V17z" fill="#001b39"/>
+  <path d="M32 18v31M21 27h7M21 35h7M36 27h7M36 35h7" stroke="#2a347b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 49c7-4 12-4 17 0s10 4 17 0" fill="none" stroke="#d60725" stroke-width="3" stroke-linecap="round"/>
 </svg>

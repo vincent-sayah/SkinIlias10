@@ -67,12 +67,8 @@ LEGACY_SKIN_DIR="${ILIAS_ROOT}/Customizing/skin"
 EFM_DIR="${SKIN_DIR}/eformarine"
 EFM_TEMPLATE="${EFM_DIR}/template.xml"
 EFM_CSS="${EFM_DIR}/eformarine/eformarine.css"
-EFM_UI_CARD="${EFM_DIR}/eformarine/UI/Card/tpl.card.html"
+EFM_UI_DIR="${EFM_DIR}/eformarine/UI"
 EFM_HEADER_ICON="${EFM_DIR}/eformarine/images/logo/HeaderIcon.svg"
-EFM_OLD_UI_LAYOUT="${EFM_DIR}/eformarine/UI/Layout/tpl.standardpage.html"
-EFM_OLD_UI_MAINBAR="${EFM_DIR}/eformarine/UI/MainControls/tpl.mainbar.html"
-EFM_OLD_UI_METABAR="${EFM_DIR}/eformarine/UI/MainControls/tpl.metabar.html"
-EFM_OLD_UI_BREADCRUMBS="${EFM_DIR}/eformarine/UI/Breadcrumbs/tpl.breadcrumbs.html"
 LEGACY_EFM_TEMPLATE="${LEGACY_SKIN_DIR}/eformarine/template.xml"
 
 echo "== eFormarine / ILIAS skin diagnostic =="
@@ -160,12 +156,6 @@ else
     echo "MISS ${EFM_CSS}"
 fi
 
-if [ -f "${EFM_UI_CARD}" ]; then
-    echo "OK  ${EFM_UI_CARD}"
-else
-    echo "MISS ${EFM_UI_CARD}"
-fi
-
 if [ -f "${EFM_HEADER_ICON}" ]; then
     echo "OK  ${EFM_HEADER_ICON}"
 else
@@ -173,16 +163,13 @@ else
 fi
 echo
 
-echo "== Removed intrusive UI overrides =="
-FOUND_OLD_OVERRIDE=0
-for old_override in "${EFM_OLD_UI_LAYOUT}" "${EFM_OLD_UI_MAINBAR}" "${EFM_OLD_UI_METABAR}" "${EFM_OLD_UI_BREADCRUMBS}"; do
-    if [ -f "${old_override}" ]; then
-        echo "WARN old intrusive override still present: ${old_override}"
-        FOUND_OLD_OVERRIDE=1
-    fi
-done
-if [ "${FOUND_OLD_OVERRIDE}" -eq 0 ]; then
-    echo "OK  old global UI overrides are absent"
+echo "== UI override safety =="
+if [ -d "${EFM_UI_DIR}" ] && find "${EFM_UI_DIR}" -type f -name 'tpl.*.html' -print | grep -q .; then
+    echo "WARN custom UI HTML overrides are present:"
+    find "${EFM_UI_DIR}" -type f -name 'tpl.*.html' -print | sort
+    echo "These files can alter ILIAS layout and tile/list rendering."
+else
+    echo "OK  no custom UI HTML overrides are active"
 fi
 echo
 

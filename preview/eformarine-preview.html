@@ -6,23 +6,23 @@
     <title>Apercu eFormarine</title>
     <link rel="stylesheet" href="../Customizing/skin/eformarine/eformarine/eformarine.css">
     <style>
-        body { margin: 0; background: #f6f8fb; }
+        body { margin: 0; background: #f6f8fb; font-family: "Marianne", "Marianne-Regular", Arial, sans-serif; }
         .preview-shell { min-height: 100vh; display: grid; grid-template-columns: 108px 1fr; }
-        .preview-sidebar { background: linear-gradient(180deg, #061a31, #03101f); color: #fff; padding-top: 18px; box-shadow: 3px 0 14px rgba(7, 21, 38, .16); }
-        .preview-mark { display: grid; place-items: center; width: 46px; height: 46px; margin: 0 auto 22px; border: 1px solid rgba(201,166,70,.6); border-radius: 8px; color: #e2c86c; font-weight: 900; }
+        .preview-sidebar { background: linear-gradient(180deg, #071f41, #001b39); color: #fff; padding-top: 18px; box-shadow: 3px 0 14px rgba(0, 27, 57, .16); }
+        .preview-mark { display: grid; place-items: center; width: 46px; height: 46px; margin: 0 auto 22px; border: 1px solid rgba(214,7,37,.6); border-radius: 8px; color: #d60725; font-weight: 900; }
         .preview-nav-item { display: block; padding: 14px 10px; border-left: 3px solid transparent; color: rgba(255,255,255,.92); text-align: center; text-decoration: none; font-size: 12px; }
-        .preview-nav-item.active, .preview-nav-item:hover { background: linear-gradient(90deg, rgba(201,166,70,.18), rgba(15,110,168,.26)); border-left-color: #c9a646; color: #fff; }
+        .preview-nav-item.active, .preview-nav-item:hover { background: linear-gradient(90deg, rgba(214,7,37,.18), rgba(42,52,123,.26)); border-left-color: #d60725; color: #fff; }
         .preview-content { min-width: 0; }
-        .preview-header { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 28px; background: #fff; border-top: 4px solid #082744; border-bottom: 1px solid rgba(7,21,38,.12); box-shadow: 0 3px 16px rgba(7,21,38,.08); }
-        .preview-header-title { display: flex; align-items: center; gap: 14px; color: #061a31; font-size: 22px; font-weight: 800; }
+        .preview-header { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 28px; background: #fff; border-top: 4px solid #001b39; border-bottom: 1px solid rgba(0,27,57,.12); box-shadow: 0 3px 16px rgba(0,27,57,.08); }
+        .preview-header-title { display: flex; align-items: center; gap: 14px; color: #001b39; font-size: 22px; font-weight: 800; font-family: "anisette-std", "Anisette", "Arial Narrow", Arial, sans-serif; }
         .preview-header-title img { width: 42px; height: 42px; }
-        .preview-badge { padding: 3px 9px; border: 1px solid rgba(184,144,46,.45); border-radius: 999px; background: rgba(201,166,70,.08); color: #b8902e; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+        .preview-badge { padding: 3px 9px; border: 1px solid rgba(214,7,37,.45); border-radius: 999px; background: rgba(214,7,37,.08); color: #d60725; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
         .preview-main { padding: 28px clamp(18px, 4vw, 56px); }
         .preview-section { max-width: 1180px; margin: 0 auto 26px; }
-        .preview-breadcrumb { display: inline-flex; gap: 8px; padding: 6px 10px; border: 1px solid rgba(15,110,168,.14); border-radius: 6px; background: rgba(15,110,168,.08); color: #2c4968; font-size: 13px; font-weight: 700; }
+        .preview-breadcrumb { display: inline-flex; gap: 8px; padding: 6px 10px; border: 1px solid rgba(42,52,123,.14); border-radius: 6px; background: #edf3fa; color: #173f70; font-size: 13px; font-weight: 700; }
         .preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
         .preview-tabs { margin-bottom: 22px; }
-        .preview-card-image { min-height: 92px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(6,26,49,.95), rgba(15,110,168,.82)); }
+        .preview-card-image { min-height: 92px; display: grid; place-items: center; background: linear-gradient(135deg, #fff, #edf3fa); }
         .preview-card-image img { width: 72px; height: 72px; }
         @media (max-width: 900px) {
             .preview-shell { grid-template-columns: 1fr; }
@@ -58,7 +58,7 @@
 
                 <section class="preview-section eformarine-banner">
                     <h1>Formation operationnelle</h1>
-                    <p>Un habillage ILIAS 10 inspire Marine nationale, sans modifier la structure native de la page.</p>
+                    <p>Un habillage ILIAS 10 inspire La Marine recrute, sans modifier la structure native de la page.</p>
                     <button class="btn btn-primary">Ajouter un nouvel objet</button>
                     <button class="btn btn-default">Editer la page</button>
                 </section>

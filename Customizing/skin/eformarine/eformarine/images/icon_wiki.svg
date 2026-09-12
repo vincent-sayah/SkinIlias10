@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Wiki</title>
-  <rect width="64" height="64" rx="12" fill="#061a31"/>
-  <path d="M13 18h38v31H13z" fill="#f1f8fc"/>
-  <path d="M20 27l5 14 7-18 7 18 5-14" fill="none" stroke="#0f6ea8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M13 49h38" stroke="#c9a646" stroke-width="4"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M13 18h38v31H13z" fill="#001b39"/>
+  <path d="M20 27l5 14 7-18 7 18 5-14" fill="none" stroke="#2a347b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 49h38" stroke="#d60725" stroke-width="4"/>
 </svg>

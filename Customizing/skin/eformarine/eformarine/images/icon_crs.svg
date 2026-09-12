@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Cours</title>
-  <rect width="64" height="64" rx="12" fill="#03101f"/>
-  <path d="M15 18h22a8 8 0 018 8v22H23a8 8 0 01-8-8V18z" fill="#f1f8fc"/>
-  <path d="M23 25h16M23 32h15M23 39h10" stroke="#0f6ea8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M44 18h5v30h-5z" fill="#c9a646"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M15 18h22a8 8 0 018 8v22H23a8 8 0 01-8-8V18z" fill="#001b39"/>
+  <path d="M23 25h16M23 32h15M23 39h10" stroke="#2a347b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 18h5v30h-5z" fill="#d60725"/>
 </svg>

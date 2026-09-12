@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Test</title>
-  <rect width="64" height="64" rx="12" fill="#061a31"/>
-  <path d="M18 12h28v40H18z" fill="#f1f8fc"/>
-  <path d="M24 25l5 5 11-12" fill="none" stroke="#0f6ea8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M24 40h17" stroke="#c9a646" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="48" cy="17" r="6" fill="#b51f2d"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M18 12h28v40H18z" fill="#001b39"/>
+  <path d="M24 25l5 5 11-12" fill="none" stroke="#2a347b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 40h17" stroke="#d60725" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48" cy="17" r="6" fill="#d60725"/>
 </svg>

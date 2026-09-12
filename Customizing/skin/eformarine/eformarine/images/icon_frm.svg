@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Forum</title>
-  <rect width="64" height="64" rx="12" fill="#082744"/>
-  <path d="M13 16h31a6 6 0 016 6v13a6 6 0 01-6 6H28l-11 8v-8h-4V16z" fill="#f1f8fc"/>
-  <path d="M22 26h19M22 33h14" stroke="#0f6ea8" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="49" cy="18" r="5" fill="#c9a646"/>
+  <rect width="64" height="64" rx="12" fill="none"/>
+  <path d="M13 16h31a6 6 0 016 6v13a6 6 0 01-6 6H28l-11 8v-8h-4V16z" fill="#001b39"/>
+  <path d="M22 26h19M22 33h14" stroke="#2a347b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="49" cy="18" r="5" fill="#d60725"/>
 </svg>

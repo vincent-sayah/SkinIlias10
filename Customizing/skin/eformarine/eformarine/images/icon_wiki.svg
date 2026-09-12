@@ -3,9 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
 <defs>
-    <linearGradient id="efm-icon-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#001b39"/>
-        <stop offset="0.72" stop-color="#003a70"/>
+    <linearGradient id="efm-icon-gradient" x1="0" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#003a70"/>
+        <stop offset="0.5" stop-color="#003a70"/>
+        <stop offset="0.5" stop-color="#e30613"/>
         <stop offset="1" stop-color="#e30613"/>
     </linearGradient>
 </defs>

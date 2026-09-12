@@ -62,7 +62,7 @@ public/Customizing/skin/eformarine/template.xml
 public/Customizing/skin/eformarine/eformarine/eformarine.css
 public/Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
 public/Customizing/skin/eformarine/eformarine/images/logo/HeaderIcon.svg
-public/Customizing/skin/eformarine/eformarine/UI/Layout/tpl.standardpage.html
+public/Customizing/skin/eformarine/eformarine/UI/Card/tpl.card.html
 ```
 
 Verifie aussi que le fichier XML est lisible par Apache/PHP-FPM, puis vide le cache ILIAS depuis l'administration.
@@ -99,4 +99,4 @@ cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
 chown -R apache:apache public/Customizing/skin/eformarine
 ```
 
-Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si les templates HTML ne changent pas tout de suite, et recharge la page avec le cache navigateur ignore.
+Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si les templates HTML ne changent pas tout de suite, et recharge la page avec le cache navigateur ignore. La version `1.1.1` supprime les anciens overrides HTML globaux : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.

@@ -23,6 +23,7 @@ Le skin eFormarine habille ILIAS 10 avec une identite inspiree de la Marine nati
 - Le fichier `eformarine.css` importe `public/assets/css/delos.css` avant les surcharges.
 - Le skin conserve les composants standards ILIAS, ce qui limite les risques de regression fonctionnelle.
 - Les surcharges ciblent la navigation, la barre haute, la barre laterale, les boutons, les tableaux, les blocs, les formulaires, les messages, la page de connexion et les tuiles repository.
-- Des overrides HTML UI ajoutent des classes dediees et une signature eForm Marine sur `standardpage`, `mainbar`, `metabar`, `breadcrumbs` et `card`.
+- L'override HTML UI est limite a `card` pour personnaliser les tuiles sans toucher au layout global ILIAS.
+- La version `1.1.1` supprime les overrides HTML globaux de `standardpage`, `mainbar`, `metabar` et `breadcrumbs`, qui etaient trop intrusifs pour la mise en page ILIAS.
 - Le dossier `images` fournit des icones SVG `icon_*.svg` pour personnaliser les objets ILIAS courants : cours, categorie, groupe, dossier, fichier, test, forum, module, SCORM, exercice, wiki, blog, session, sondage, lien web et pool de questions.
 - Les classes utilitaires `eformarine-banner`, `eformarine-brand` et `eformarine-callout` peuvent etre utilisees dans du contenu de page ILIAS si besoin.

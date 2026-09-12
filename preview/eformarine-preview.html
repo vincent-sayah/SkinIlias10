@@ -6,116 +6,101 @@
     <title>Apercu eFormarine</title>
     <link rel="stylesheet" href="../Customizing/skin/eformarine/eformarine/eformarine.css">
     <style>
-        body { margin: 0; }
-        .preview-main { padding: 32px clamp(18px, 4vw, 58px); }
-        .preview-section { max-width: 1180px; margin: 0 auto 28px; }
+        body { margin: 0; background: #f6f8fb; }
+        .preview-shell { min-height: 100vh; display: grid; grid-template-columns: 108px 1fr; }
+        .preview-sidebar { background: linear-gradient(180deg, #061a31, #03101f); color: #fff; padding-top: 18px; box-shadow: 3px 0 14px rgba(7, 21, 38, .16); }
+        .preview-mark { display: grid; place-items: center; width: 46px; height: 46px; margin: 0 auto 22px; border: 1px solid rgba(201,166,70,.6); border-radius: 8px; color: #e2c86c; font-weight: 900; }
+        .preview-nav-item { display: block; padding: 14px 10px; border-left: 3px solid transparent; color: rgba(255,255,255,.92); text-align: center; text-decoration: none; font-size: 12px; }
+        .preview-nav-item.active, .preview-nav-item:hover { background: linear-gradient(90deg, rgba(201,166,70,.18), rgba(15,110,168,.26)); border-left-color: #c9a646; color: #fff; }
+        .preview-content { min-width: 0; }
+        .preview-header { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 28px; background: #fff; border-top: 4px solid #082744; border-bottom: 1px solid rgba(7,21,38,.12); box-shadow: 0 3px 16px rgba(7,21,38,.08); }
+        .preview-header-title { display: flex; align-items: center; gap: 14px; color: #061a31; font-size: 22px; font-weight: 800; }
+        .preview-header-title img { width: 42px; height: 42px; }
+        .preview-badge { padding: 3px 9px; border: 1px solid rgba(184,144,46,.45); border-radius: 999px; background: rgba(201,166,70,.08); color: #b8902e; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+        .preview-main { padding: 28px clamp(18px, 4vw, 56px); }
+        .preview-section { max-width: 1180px; margin: 0 auto 26px; }
+        .preview-breadcrumb { display: inline-flex; gap: 8px; padding: 6px 10px; border: 1px solid rgba(15,110,168,.14); border-radius: 6px; background: rgba(15,110,168,.08); color: #2c4968; font-size: 13px; font-weight: 700; }
         .preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-        .preview-tabs { margin-bottom: 24px; }
-        .preview-title { margin: 0 0 18px; color: var(--efm-ocean-940); }
-        .il-mainbar-entries { visibility: visible !important; }
-        .il-mainbar-entries button { width: 100%; }
-        @media (max-width: 900px) { .preview-grid { grid-template-columns: 1fr; } }
+        .preview-tabs { margin-bottom: 22px; }
+        .preview-card-image { min-height: 92px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(6,26,49,.95), rgba(15,110,168,.82)); }
+        .preview-card-image img { width: 72px; height: 72px; }
+        @media (max-width: 900px) {
+            .preview-shell { grid-template-columns: 1fr; }
+            .preview-sidebar { display: none; }
+            .preview-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
-<body class="eformarine-ui">
-    <div class="il-layout-page eformarine-layout-page">
-        <div class="eformarine-topband" aria-hidden="true">
-            <span>eForm Marine</span>
-            <span>Former - Servir - Transmettre</span>
-        </div>
+<body>
+    <div class="preview-shell">
+        <aside class="preview-sidebar">
+            <div class="preview-mark">EF</div>
+            <a class="preview-nav-item active" href="#">Tableau de bord</a>
+            <a class="preview-nav-item" href="#">Catalogue</a>
+            <a class="preview-nav-item" href="#">Espace personnel</a>
+            <a class="preview-nav-item" href="#">Administration</a>
+        </aside>
 
-        <header>
-            <div class="header-inner">
-                <div class="il-logo">
+        <div class="preview-content">
+            <header class="preview-header">
+                <div class="preview-header-title">
                     <img src="../Customizing/skin/eformarine/eformarine/images/logo/HeaderIcon.svg" alt="">
-                    <div class="il-pagetitle">Open Source eLearning</div>
+                    <span>Open Source eLearning</span>
+                    <span class="preview-badge">Marine nationale</span>
                 </div>
-                <ul class="il-maincontrols-metabar eformarine-metabar" role="menubar" aria-label="Meta">
-                    <li role="none"><button class="btn btn-link">Alertes</button></li>
-                    <li role="none"><button class="btn btn-link">Recherche</button></li>
-                    <li role="none"><button class="btn btn-link">ro</button></li>
-                </ul>
-            </div>
-        </header>
+                <button class="btn btn-default">Profil</button>
+            </header>
 
-        <div class="nav il-maincontrols">
-            <div class="il-maincontrols-mainbar eformarine-mainbar">
-                <nav class="il-mainbar" aria-label="Navigation principale">
-                    <div class="eformarine-mainbar-brand" aria-hidden="true"><span>EF</span></div>
-                    <div class="il-mainbar-triggers">
-                        <ul class="il-mainbar-entries" role="menubar">
-                            <li role="none"><button class="btn btn-link engaged">Tableau de bord</button></li>
-                            <li role="none"><button class="btn btn-link">Catalogue</button></li>
-                            <li role="none"><button class="btn btn-link">Espace personnel</button></li>
-                            <li role="none"><button class="btn btn-link">Administration</button></li>
-                        </ul>
+            <main class="preview-main">
+                <section class="preview-section">
+                    <div class="preview-breadcrumb">Catalogue &gt; Page d'accueil</div>
+                </section>
+
+                <section class="preview-section eformarine-banner">
+                    <h1>Formation operationnelle</h1>
+                    <p>Un habillage ILIAS 10 inspire Marine nationale, sans modifier la structure native de la page.</p>
+                    <button class="btn btn-primary">Ajouter un nouvel objet</button>
+                    <button class="btn btn-default">Editer la page</button>
+                </section>
+
+                <section class="preview-section">
+                    <ul class="nav nav-tabs preview-tabs" role="tablist">
+                        <li class="active"><a href="#">Contenu</a></li>
+                        <li><a href="#">Parametres</a></li>
+                        <li><a href="#">Permissions</a></li>
+                    </ul>
+
+                    <div class="preview-grid">
+                        <article class="il-card thumbnail eformarine-card">
+                            <div class="eformarine-card-watermark" aria-hidden="true"></div>
+                            <div class="preview-card-image il-card-image-container">
+                                <img src="../Customizing/skin/eformarine/eformarine/images/icon_cat.svg" alt="">
+                            </div>
+                            <div class="caption card-title"><a href="#">Categories</a></div>
+                            <div class="caption">Classement des espaces et parcours.</div>
+                        </article>
+
+                        <article class="il-card thumbnail eformarine-card">
+                            <div class="eformarine-card-watermark" aria-hidden="true"></div>
+                            <div class="preview-card-image il-card-image-container">
+                                <img src="../Customizing/skin/eformarine/eformarine/images/icon_crs.svg" alt="">
+                            </div>
+                            <div class="caption card-title"><a href="#">Cours passerelle</a></div>
+                            <div class="caption">Supports, activites et progression.</div>
+                        </article>
+
+                        <article class="il-card thumbnail eformarine-card">
+                            <div class="eformarine-card-watermark" aria-hidden="true"></div>
+                            <div class="preview-card-image il-card-image-container">
+                                <img src="../Customizing/skin/eformarine/eformarine/images/icon_tst.svg" alt="">
+                            </div>
+                            <div class="caption card-title"><a href="#">Evaluation</a></div>
+                            <div class="caption">Tests, banques de questions et resultats.</div>
+                        </article>
                     </div>
-                </nav>
-            </div>
+                </section>
+            </main>
         </div>
-
-        <main class="il-layout-page-content preview-main">
-            <nav aria-label="Fil d'Ariane" class="breadcrumb-wrapper eformarine-breadcrumbs-wrapper preview-section">
-                <div class="breadcrumb eformarine-breadcrumbs" dir="rtl">
-                    <span class="eformarine-breadcrumb-label" dir="ltr">Position</span>
-                    <span class="breadcrumb-crumb" dir="ltr"><a href="#">Administration</a></span>
-                    <span class="breadcrumb-separator" dir="rtl"></span>
-                    <span class="breadcrumb-crumb" dir="ltr"><a href="#">Style et mise en page</a></span>
-                </div>
-            </nav>
-
-            <section class="preview-section eformarine-banner">
-                <h1>Formation operationnelle</h1>
-                <p>Un habillage ILIAS 10 fortement inspire Marine nationale : bleu profond, accents or, navigation tranchee et objets de formation identifies visuellement.</p>
-                <button class="btn btn-primary">Action principale</button>
-                <button class="btn btn-default">Action secondaire</button>
-            </section>
-
-            <section class="preview-section">
-                <ul class="nav nav-tabs preview-tabs" role="tablist">
-                    <li class="active"><a href="#">Styles Systeme</a></li>
-                    <li><a href="#">Styles de Contenu</a></li>
-                    <li><a href="#">Modeles de page</a></li>
-                    <li><a href="#">Permissions</a></li>
-                </ul>
-
-                <h2 class="preview-title">Tuiles personnalisees</h2>
-                <div class="preview-grid">
-                    <article class="il-card thumbnail eformarine-card">
-                        <div class="eformarine-card-watermark" aria-hidden="true"></div>
-                        <div class="il-card-image-container">
-                            <img src="../Customizing/skin/eformarine/eformarine/images/icon_crs.svg" alt="">
-                        </div>
-                        <div class="caption card-title"><a href="#">Cours passerelle officier marinier</a></div>
-                        <div class="caption">Parcours structure, ressources et progression.</div>
-                    </article>
-
-                    <article class="il-card thumbnail eformarine-card">
-                        <div class="eformarine-card-watermark" aria-hidden="true"></div>
-                        <div class="il-card-image-container">
-                            <img src="../Customizing/skin/eformarine/eformarine/images/icon_tst.svg" alt="">
-                        </div>
-                        <div class="caption card-title"><a href="#">Evaluation securite nautique</a></div>
-                        <div class="caption">Questionnaires, tests et validation des acquis.</div>
-                    </article>
-
-                    <article class="il-card thumbnail eformarine-card">
-                        <div class="eformarine-card-watermark" aria-hidden="true"></div>
-                        <div class="il-card-image-container">
-                            <img src="../Customizing/skin/eformarine/eformarine/images/icon_file.svg" alt="">
-                        </div>
-                        <div class="caption card-title"><a href="#">Doctrine et procedure</a></div>
-                        <div class="caption">Documents et supports de reference.</div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="preview-section">
-                <div class="eformarine-callout">
-                    Les composants courants ILIAS sont restyles : boutons, tableaux, formulaires, notifications, login, cartes et listes repository.
-                </div>
-            </section>
-        </main>
     </div>
 </body>
 </html>

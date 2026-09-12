@@ -693,3 +693,214 @@ body.ilStartupPage {
         radial-gradient(circle at 78% 12%, rgba(201, 166, 70, 0.18), transparent 20rem),
         linear-gradient(135deg, var(--efm-ocean-980), var(--efm-ocean-880)) !important;
 }
+
+/* eFormarine 1.1.1: keep the native ILIAS layout stable. */
+.eformarine-topband,
+.eformarine-mainbar-brand,
+.eformarine-breadcrumb-label {
+    display: none !important;
+}
+
+body:not(.il-layout-page-login):not(.ilStartupPage) {
+    background:
+        linear-gradient(180deg, rgba(241, 248, 252, 0.62), rgba(255, 255, 255, 0.92) 18rem),
+        var(--efm-surface) !important;
+}
+
+.il-layout-page > header,
+.eformarine-ui header {
+    background: var(--efm-white) !important;
+    border-top: 4px solid var(--efm-ocean-880) !important;
+    border-bottom: 1px solid rgba(7, 21, 38, 0.12) !important;
+    box-shadow: 0 3px 16px rgba(7, 21, 38, 0.08) !important;
+}
+
+.il-layout-page > header .header-inner,
+.eformarine-ui .header-inner {
+    min-height: 62px !important;
+    color: var(--efm-ocean-940) !important;
+}
+
+.header-inner .il-pagetitle,
+.header-inner .il-pagetitle *,
+.il-layout-page > header a {
+    color: var(--efm-ocean-940) !important;
+}
+
+.header-inner .il-logo::after {
+    min-height: 20px !important;
+    margin-left: 0.85rem !important;
+    padding: 0.15rem 0.48rem !important;
+    border-color: rgba(184, 144, 46, 0.45) !important;
+    background: rgba(201, 166, 70, 0.08) !important;
+    color: var(--efm-gold-600) !important;
+    font-size: 0.68rem !important;
+}
+
+.il-maincontrols {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.il-maincontrols-mainbar {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.il-mainbar {
+    background: linear-gradient(180deg, var(--efm-ocean-940), var(--efm-ocean-980)) !important;
+    border-right: 1px solid rgba(7, 21, 38, 0.22) !important;
+    box-shadow: 3px 0 14px rgba(7, 21, 38, 0.16) !important;
+}
+
+.il-mainbar-triggers,
+.il-mainbar-tools-button,
+.il-mainbar-tools-entries {
+    background: transparent !important;
+}
+
+.il-mainbar-triggers .btn,
+.il-mainbar-triggers button,
+.il-mainbar-triggers a,
+.il-mainbar-entries > li > *,
+.il-mainbar .btn-bulky,
+.il-mainbar .link-bulky,
+.il-mainbar-tools-button .btn {
+    background: transparent !important;
+    border: 0 !important;
+    border-left: 3px solid transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.il-mainbar-triggers .btn:hover,
+.il-mainbar-triggers .btn:focus,
+.il-mainbar-triggers button:hover,
+.il-mainbar-triggers button:focus,
+.il-mainbar-triggers a:hover,
+.il-mainbar-triggers a:focus,
+.il-mainbar-entries > li > *:hover,
+.il-mainbar-entries > li > *:focus,
+.il-mainbar-entries > li > .engaged,
+.il-mainbar-entries > li > .active,
+.il-mainbar .btn-bulky.engaged,
+.il-mainbar .btn-bulky.active,
+.il-mainbar [aria-expanded="true"],
+.il-mainbar [aria-current="page"] {
+    background: linear-gradient(90deg, rgba(201, 166, 70, 0.18), rgba(15, 110, 168, 0.26)) !important;
+    border-left-color: var(--efm-gold-500) !important;
+    color: var(--efm-white) !important;
+}
+
+.il-maincontrols-metabar > li > .btn,
+.il-maincontrols-metabar > li > button,
+.il-maincontrols-metabar > li > a,
+.eformarine-metabar > li > .btn,
+.eformarine-metabar > li > button,
+.eformarine-metabar > li > a {
+    background: rgba(7, 21, 38, 0.04) !important;
+    border: 1px solid rgba(7, 21, 38, 0.12) !important;
+    color: var(--efm-ocean-940) !important;
+}
+
+.il-maincontrols-metabar > li > .btn:hover,
+.il-maincontrols-metabar > li > button:hover,
+.il-maincontrols-metabar > li > a:hover {
+    background: rgba(15, 110, 168, 0.08) !important;
+    border-color: rgba(15, 110, 168, 0.28) !important;
+}
+
+.breadcrumbs,
+.breadcrumb-wrapper {
+    margin: 0 0 1rem !important;
+}
+
+.breadcrumb-wrapper .breadcrumb,
+.breadcrumbs .breadcrumb,
+.il-header-locator .breadcrumb {
+    display: inline-flex !important;
+    width: auto !important;
+    min-height: 0 !important;
+    padding: 0.35rem 0.65rem !important;
+    background: rgba(15, 110, 168, 0.08) !important;
+    border: 1px solid rgba(15, 110, 168, 0.14) !important;
+    border-radius: 6px !important;
+}
+
+.breadcrumb-crumb a,
+.breadcrumb a,
+.il-header-locator a {
+    color: var(--efm-steel-700) !important;
+    font-weight: 700 !important;
+}
+
+.nav-tabs,
+.ilTabs,
+.ilTab,
+.ilc_page_tnav_TopNavigation {
+    gap: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--efm-line) !important;
+    border-radius: 0 !important;
+}
+
+.nav-tabs > li > a,
+.ilTabs a,
+.ilTab a,
+.ilc_page_tnav_TopNavigation a {
+    border-radius: 4px 4px 0 0 !important;
+    color: var(--efm-steel-700) !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.ilTabActive,
+.ilTabs .active a,
+.ilc_page_tnav_TopNavigation .ilc_page_tnavlink_Active {
+    background: var(--efm-white) !important;
+    border: 1px solid var(--efm-line) !important;
+    border-top: 3px solid var(--efm-gold-500) !important;
+    border-bottom-color: var(--efm-white) !important;
+    box-shadow: none !important;
+    color: var(--efm-ocean-940) !important;
+}
+
+.il-card.thumbnail,
+.thumbnail.il-card,
+.ilContainerListItemOuter,
+.ilObjListRow {
+    background: var(--efm-white) !important;
+    border-color: rgba(7, 21, 38, 0.12) !important;
+    box-shadow: 0 4px 14px rgba(7, 21, 38, 0.08) !important;
+}
+
+.il-card-image-container {
+    min-height: 92px !important;
+    background:
+        linear-gradient(135deg, rgba(6, 26, 49, 0.95), rgba(15, 110, 168, 0.82)),
+        var(--efm-ocean-880) !important;
+}
+
+.il-card-image-container > img {
+    opacity: 0.18 !important;
+    filter: grayscale(1) sepia(0.2) hue-rotate(160deg) saturate(0.8) brightness(0.9) !important;
+}
+
+.il-card-image-container::after {
+    content: "" !important;
+}
+
+.il-card .card-title,
+.il-card .caption.card-title {
+    padding-top: 0.65rem !important;
+}
+
+.il-card .card-title::before,
+.il-card .caption.card-title::before {
+    background: rgba(15, 110, 168, 0.08) !important;
+    color: var(--efm-ocean-880) !important;
+}

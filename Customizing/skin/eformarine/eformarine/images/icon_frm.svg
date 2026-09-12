@@ -2,17 +2,9 @@
 <!-- Original ILIAS 10 Delos icon, recolored for eFormarine. -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
-<defs>
-    <linearGradient id="efm-icon-gradient" x1="0" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#003a70"/>
-        <stop offset="0.5" stop-color="#003a70"/>
-        <stop offset="0.5" stop-color="#e30613"/>
-        <stop offset="1" stop-color="#e30613"/>
-    </linearGradient>
-</defs>
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_00000115485150494034748380000002565816216325826472_);fill:url(#efm-icon-gradient);}
-	.st1{clip-path:url(#SVGID_00000106840848098391869960000015929789014967137676_);fill:url(#efm-icon-gradient);}
+	.efm-blue{fill:#003a70;}
+	.efm-red{fill:#e30613;}
 	.st2{fill:none;}
 </style>
 <g>
@@ -23,7 +15,7 @@
 		<clipPath id="SVGID_00000027596565565737537330000003757932401253004720_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<path style="clip-path:url(#SVGID_00000027596565565737537330000003757932401253004720_);fill:url(#efm-icon-gradient);" d="M240,133.6V60
+		<path style="clip-path:url(#SVGID_00000027596565565737537330000003757932401253004720_);fill:#003a70;" d="M240,133.6V60
 			c0-11-9-20-20-20H60c-11,0-20,9-20,20v110c0,11,9,20,20,20h10v51.3l42.8-51.3h32.5v-15h-38.4L85,201.3V175H65c-5.5,0-10-4.5-10-10
 			V65c0-5.5,4.5-10,10-10h150c5.5,0,10,4.5,10,10v68.6H240z"/>
 	</g>
@@ -34,7 +26,7 @@
 		<clipPath id="SVGID_00000143607566778874213570000007385277786695329725_">
 			<use xlink:href="#SVGID_00000090979109520433979520000014551278835872411538_"  style="overflow:visible;"/>
 		</clipPath>
-		<path style="clip-path:url(#SVGID_00000143607566778874213570000007385277786695329725_);fill:url(#efm-icon-gradient);" d="M257.6,183.6h-79.8
+		<path style="clip-path:url(#SVGID_00000143607566778874213570000007385277786695329725_);fill:#e30613;" d="M257.6,183.6h-79.8
 			v-15h79.8V183.6z M177.8,198.6h54.9v15h-54.9L177.8,198.6L177.8,198.6z M280,225.9v-61.8c0-15.5-15-15.5-15-15.5h-89.8
 			c-15,0-15,15.5-15,15.5v61.8c0,15.5,15,15.5,15,15.5h43.6V280l31.2-38.6h15C280,241.4,280,225.9,280,225.9"/>
 	</g>

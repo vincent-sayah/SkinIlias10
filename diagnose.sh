@@ -69,6 +69,8 @@ EFM_TEMPLATE="${EFM_DIR}/template.xml"
 EFM_CSS="${EFM_DIR}/eformarine/eformarine.css"
 EFM_UI_DIR="${EFM_DIR}/eformarine/UI"
 EFM_HEADER_ICON="${EFM_DIR}/eformarine/images/logo/HeaderIcon.svg"
+EFM_HEADER_LOGO="${EFM_DIR}/eformarine/images/logo/logo_eformarine_header.png"
+EFM_ICON_LOGO="${EFM_DIR}/eformarine/images/logo/logo_eformarine_icon.png"
 LEGACY_EFM_TEMPLATE="${LEGACY_SKIN_DIR}/eformarine/template.xml"
 
 echo "== eFormarine / ILIAS skin diagnostic =="
@@ -161,6 +163,18 @@ if [ -f "${EFM_HEADER_ICON}" ]; then
 else
     echo "MISS ${EFM_HEADER_ICON}"
 fi
+
+if [ -f "${EFM_HEADER_LOGO}" ]; then
+    echo "OK  ${EFM_HEADER_LOGO}"
+else
+    echo "MISS ${EFM_HEADER_LOGO}"
+fi
+
+if [ -f "${EFM_ICON_LOGO}" ]; then
+    echo "OK  ${EFM_ICON_LOGO}"
+else
+    echo "MISS ${EFM_ICON_LOGO}"
+fi
 echo
 
 echo "== UI override safety =="
@@ -206,7 +220,7 @@ echo
 
 echo "== eFormarine object icons =="
 if [ -d "${EFM_DIR}/eformarine/images" ]; then
-    find "${EFM_DIR}/eformarine/images" -maxdepth 2 -type f \( -name 'icon_*.svg' -o -name 'HeaderIcon.svg' \) -print | sort
+    find "${EFM_DIR}/eformarine/images" -maxdepth 2 -type f \( -name 'icon_*.svg' -o -name 'HeaderIcon.svg' -o -name 'logo_eformarine*.png' \) -print | sort
 else
     echo "MISS ${EFM_DIR}/eformarine/images"
 fi

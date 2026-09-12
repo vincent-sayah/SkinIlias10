@@ -15,7 +15,7 @@
         .preview-content { min-width: 0; }
         .preview-header { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 28px; background: #fff; border-top: 4px solid #001b39; border-bottom: 1px solid rgba(0,27,57,.12); box-shadow: 0 3px 16px rgba(0,27,57,.08); }
         .preview-header-title { display: flex; align-items: center; gap: 14px; color: #001b39; font-size: 22px; font-weight: 800; font-family: "anisette-std", "Anisette", "Arial Narrow", Arial, sans-serif; }
-        .preview-header-title img { width: 42px; height: 42px; }
+        .preview-header-title img { width: min(320px, 44vw); height: 56px; object-fit: contain; object-position: left center; }
         .preview-badge { padding: 3px 9px; border: 1px solid rgba(214,7,37,.45); border-radius: 999px; background: rgba(214,7,37,.08); color: #d60725; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
         .preview-main { padding: 28px clamp(18px, 4vw, 56px); }
         .preview-section { max-width: 1180px; margin: 0 auto 26px; }
@@ -44,8 +44,7 @@
         <div class="preview-content">
             <header class="preview-header">
                 <div class="preview-header-title">
-                    <img src="../Customizing/skin/eformarine/eformarine/images/logo/HeaderIcon.svg" alt="">
-                    <span>Open Source eLearning</span>
+                    <img src="../Customizing/skin/eformarine/eformarine/images/logo/logo_eformarine_header.png" alt="">
                     <span class="preview-badge">Marine nationale</span>
                 </div>
                 <button class="btn btn-default">Profil</button>

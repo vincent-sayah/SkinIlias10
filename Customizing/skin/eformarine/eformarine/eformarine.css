@@ -1,6 +1,6 @@
 @import url("../../../../assets/css/delos.css");
 
-/* eFormarine 1.1.3: La Marine recrute inspired identity, with eForm Marine header logo. */
+/* eFormarine 1.1.4: refined mainbar, slate menus, tile actions and repository icons. */
 
 :root {
     --efm-navy-950: #001b39;
@@ -17,6 +17,8 @@
     --efm-muted: #5c6878;
     --efm-line: #d9e2ec;
     --efm-surface: #f6f8fb;
+    --efm-slate: #eef2f6;
+    --efm-slate-hover: #e2e9f1;
     --efm-radius: 8px;
     --efm-shadow: 0 10px 26px rgba(0, 27, 57, 0.12);
     --efm-font-body: "Marianne", "Marianne-Regular", Arial, "Helvetica Neue", sans-serif;
@@ -165,7 +167,7 @@ a:focus {
     content: url("images/logo/logo_eformarine_header.png") !important;
     display: block !important;
     width: min(320px, 34vw) !important;
-   /* max-width: 320px !important;*/
+    /* max-width: 320px !important; */
     height: 56px !important;
     object-fit: contain !important;
     object-position: left center !important;
@@ -179,7 +181,6 @@ a:focus {
 .il-maincontrols,
 .il-mainbar,
 .il-mainbar-triggers,
-.il-mainbar-slates,
 #ilMainMenu,
 .ilMainMenu,
 .ilMainMenuSection {
@@ -201,6 +202,18 @@ a:focus {
     border-radius: 0 !important;
     color: rgba(255, 255, 255, 0.92) !important;
     box-shadow: inset 0 0 0 0 var(--efm-red-600) !important;
+}
+
+.il-mainbar-triggers .btn-bulky,
+.il-mainbar-triggers .il-link.link-bulky,
+.il-mainbar-triggers .btn-bulky *,
+.il-mainbar-triggers .il-link.link-bulky *,
+.il-mainbar .btn-bulky,
+.il-mainbar .il-link.link-bulky,
+.il-mainbar .btn-bulky *,
+.il-mainbar .il-link.link-bulky * {
+    color: var(--efm-white) !important;
+    opacity: 1 !important;
 }
 
 .il-mainbar-triggers a:hover,
@@ -225,6 +238,23 @@ a:focus {
     box-shadow: inset 4px 0 0 var(--efm-red-600) !important;
 }
 
+.il-mainbar-triggers a:hover *,
+.il-mainbar-triggers button:hover *,
+.il-mainbar-triggers .btn:hover *,
+.il-mainbar-triggers a:focus *,
+.il-mainbar-triggers button:focus *,
+.il-mainbar-triggers .btn:focus *,
+.il-mainbar-triggers .active *,
+.il-mainbar-triggers .engaged *,
+.il-mainbar-triggers [aria-current="true"] *,
+.il-mainbar-triggers [aria-expanded="true"] *,
+.il-mainbar a:hover *,
+.il-mainbar button:hover *,
+.il-mainbar .btn:hover * {
+    color: var(--efm-white) !important;
+    opacity: 1 !important;
+}
+
 .il-mainbar svg,
 .il-mainbar-triggers svg,
 #ilMainMenu svg,
@@ -237,16 +267,112 @@ a:focus {
 .il-mainbar-triggers img,
 #ilMainMenu img,
 .ilMainMenu img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) contrast(1.15);
+    opacity: 1 !important;
 }
 
+.il-mainbar-triggers a:hover img,
+.il-mainbar-triggers button:hover img,
+.il-mainbar-triggers .btn:hover img,
+.il-mainbar-triggers .engaged img,
+.il-mainbar-triggers [aria-expanded="true"] img {
+    filter: brightness(0) invert(1) contrast(1.25) !important;
+}
+
+.il-mainbar-slates,
 .il-mainbar-slate,
 .il-mainbar-slates .il-mainbar-slate,
+.il-maincontrols-slate,
 .il-maincontrols-slate-content {
-    background: var(--efm-white) !important;
+    background: var(--efm-slate) !important;
     color: var(--efm-ink) !important;
     border-color: var(--efm-line) !important;
     box-shadow: 6px 0 24px rgba(0, 27, 57, 0.16);
+}
+
+.il-mainbar-slates ul,
+.il-mainbar-slates li,
+.il-mainbar-slates .il-maincontrols-slate-content > ul,
+.il-mainbar-slates .il-mainbar-tools-entries-bg,
+.il-mainbar-slates #ilMainMenu,
+.il-mainbar-slates .ilMainMenu,
+.il-mainbar-slates .ilMainMenuSection,
+.il-mainbar-slates .ilExplorer,
+.il-mainbar-slates .ilTreeView {
+    background: transparent !important;
+    color: var(--efm-ink) !important;
+}
+
+.il-mainbar-slates a,
+.il-mainbar-slates button,
+.il-mainbar-slates .btn,
+.il-mainbar-slates .il-link,
+.il-mainbar-slates .btn-bulky,
+.il-mainbar-slates .il-link.link-bulky {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--efm-ink) !important;
+}
+
+.il-mainbar-slates #ilMainMenu *,
+.il-mainbar-slates .ilMainMenu *,
+.il-mainbar-slates .ilMainMenuSection *,
+.il-mainbar-slates .ilExplorer *,
+.il-mainbar-slates .ilTreeView * {
+    color: var(--efm-ink) !important;
+}
+
+.il-mainbar-slates .bulky-label,
+.il-mainbar-slates .glyph,
+.il-mainbar-slates svg {
+    color: var(--efm-ink) !important;
+    stroke: currentColor !important;
+}
+
+.il-mainbar-slates img.icon,
+.il-mainbar-slates img[src*="icon_"] {
+    filter: none !important;
+}
+
+.il-mainbar-slates a:hover,
+.il-mainbar-slates a:focus,
+.il-mainbar-slates button:hover,
+.il-mainbar-slates button:focus,
+.il-mainbar-slates .btn:hover,
+.il-mainbar-slates .btn:focus,
+.il-mainbar-slates .il-link:hover,
+.il-mainbar-slates .il-link:focus,
+.il-mainbar-slates .btn-bulky:hover,
+.il-mainbar-slates .btn-bulky:focus,
+.il-mainbar-slates .il-link.link-bulky:hover,
+.il-mainbar-slates .il-link.link-bulky:focus {
+    background: var(--efm-slate-hover) !important;
+    box-shadow: inset 4px 0 0 var(--efm-red-600) !important;
+    color: var(--efm-navy-950) !important;
+}
+
+.il-mainbar-close-slates,
+.il-mainbar-close-slates .btn-bulky,
+.il-mainbar-close-slates button {
+    background: var(--efm-slate) !important;
+    border-color: var(--efm-line) !important;
+    color: var(--efm-navy-950) !important;
+}
+
+.il-mainbar-close-slates .glyph,
+.il-mainbar-close-slates .bulky-label,
+.il-mainbar-close-slates svg {
+    color: var(--efm-navy-950) !important;
+    stroke: currentColor !important;
+}
+
+.il-mainbar-close-slates .btn-bulky:hover,
+.il-mainbar-close-slates .btn-bulky:focus,
+.il-mainbar-close-slates button:hover,
+.il-mainbar-close-slates button:focus {
+    background: var(--efm-slate-hover) !important;
+    box-shadow: inset 4px 0 0 var(--efm-red-600) !important;
+    color: var(--efm-navy-950) !important;
 }
 
 .breadcrumb,
@@ -441,6 +567,10 @@ input.btn-default:focus {
 
 .dropdown,
 .btn-group,
+.row-eq-height,
+.il-deck,
+.il-card-view,
+.ilContainerTile,
 .il-card,
 .il-card.thumbnail,
 .thumbnail.il-card,
@@ -476,6 +606,51 @@ input.btn-default:focus {
     border-radius: var(--efm-radius) !important;
     box-shadow: 0 16px 34px rgba(0, 27, 57, 0.18) !important;
     z-index: 5000 !important;
+}
+
+.il-card,
+.il-card.thumbnail,
+.thumbnail.il-card {
+    position: relative !important;
+    z-index: 1;
+}
+
+.il-card:hover,
+.il-card:focus-within,
+.il-card.thumbnail:hover,
+.il-card.thumbnail:focus-within,
+.thumbnail.il-card:hover,
+.thumbnail.il-card:focus-within {
+    z-index: 6000 !important;
+}
+
+.il-card a {
+    overflow: visible !important;
+}
+
+.il-card-repository-head {
+    position: relative !important;
+    z-index: 50 !important;
+    overflow: visible !important;
+}
+
+.il-card-repository-dropdown,
+.il-card-repository-dropdown .dropdown,
+.il-card-repository-dropdown .btn-group {
+    position: relative !important;
+    z-index: 60 !important;
+    overflow: visible !important;
+}
+
+.il-card-repository-dropdown .dropdown-menu,
+.il-card-repository-dropdown .open > .dropdown-menu,
+.il-card-repository-dropdown .btn-group.open > .dropdown-menu,
+.il-card-repository-dropdown .dropdown.open > .dropdown-menu {
+    top: calc(100% + 6px) !important;
+    right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 12000 !important;
 }
 
 .dropdown-menu > li > a,
@@ -561,6 +736,26 @@ input.btn-default:focus {
     object-fit: contain;
 }
 
+img[src*="icon_cat.svg"] { content: url("images/icon_cat.svg") !important; }
+img[src*="icon_crs.svg"] { content: url("images/icon_crs.svg") !important; }
+img[src*="icon_fold.svg"] { content: url("images/icon_fold.svg") !important; }
+img[src*="icon_file.svg"] { content: url("images/icon_file.svg") !important; }
+img[src*="icon_tst.svg"] { content: url("images/icon_tst.svg") !important; }
+img[src*="icon_frm.svg"] { content: url("images/icon_frm.svg") !important; }
+img[src*="icon_lm.svg"] { content: url("images/icon_lm.svg") !important; }
+img[src*="icon_grp.svg"] { content: url("images/icon_grp.svg") !important; }
+img[src*="icon_wiki.svg"] { content: url("images/icon_wiki.svg") !important; }
+img[src*="icon_webr.svg"] { content: url("images/icon_webr.svg") !important; }
+img[src*="icon_sahs.svg"] { content: url("images/icon_sahs.svg") !important; }
+img[src*="icon_lso.svg"] { content: url("images/icon_lso.svg") !important; }
+img[src*="icon_qpl.svg"] { content: url("images/icon_qpl.svg") !important; }
+img[src*="icon_sess.svg"] { content: url("images/icon_sess.svg") !important; }
+img[src*="icon_blog.svg"] { content: url("images/icon_blog.svg") !important; }
+img[src*="icon_svy.svg"] { content: url("images/icon_svy.svg") !important; }
+img[src*="icon_exc.svg"] { content: url("images/icon_exc.svg") !important; }
+img[src*="icon_htlm.svg"],
+img[src*="icon_html.svg"] { content: url("images/icon_htlm.svg") !important; }
+
 .il-card,
 .il-card.thumbnail,
 .thumbnail.il-card,
@@ -587,7 +782,7 @@ input.btn-default:focus {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffffff, var(--efm-blue-100)) !important;
+    background: var(--efm-white) !important;
     border-bottom: 1px solid var(--efm-line) !important;
 }
 

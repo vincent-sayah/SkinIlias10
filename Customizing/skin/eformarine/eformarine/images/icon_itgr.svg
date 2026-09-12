@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original ILIAS 10 Delos icon, recolored for eFormarine. -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<style type="text/css">
+	.efm-blue{fill:#003a70;}
+	.efm-red{fill:#e30613;}
+	.st1{fill:none;}
+</style>
+<rect x="97.5" y="107.5" class="efm-red" width="170" height="30"/>
+<rect x="97.5" y="172.5" class="efm-blue" width="170" height="30"/>
+<rect x="97.5" y="237.5" class="efm-blue" width="170" height="30"/>
+<rect x="52.5" y="107.5" class="efm-red" width="30" height="30"/>
+<rect x="52.5" y="172.5" class="efm-red" width="30" height="30"/>
+<rect x="52.5" y="237.5" class="efm-red" width="30" height="30"/>
+<rect x="30" y="52.5" class="efm-blue" width="260" height="15"/>
+<rect class="st1" width="320" height="320"/>
+</svg>

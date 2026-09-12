@@ -4,7 +4,7 @@ Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale
 
 Le depot contient un skin installable dans `public/Customizing/skin/eformarine` pour ILIAS 10, avec un style unique : `eFormarine - Marine nationale`.
 
-La version `1.1.7` garde la structure native ILIAS et concentre la personnalisation sur le CSS et les icones : logo eForm Marine dans le bandeau haut gauche, barre laterale bleu marine avec accent rouge lisible, panneaux lateraux gris, barre haute sobre, fil d'Ariane, onglets, tuiles, cartes repository, menus d'action non tronques et icones d'objets ILIAS d'origine recolorisees par element, sans fond colore en vue liste.
+La version `1.1.8` garde la structure native ILIAS et concentre la personnalisation sur le CSS et les icones : logo eForm Marine dans le bandeau haut gauche, barre laterale bleu marine avec accent rouge lisible, panneaux lateraux gris, barre haute sobre, fil d'Ariane, onglets, tuiles, cartes repository, menus d'action non tronques et icones d'objets ILIAS d'origine recolorisees par element, sans fond colore en vue liste.
 
 ## Structure
 

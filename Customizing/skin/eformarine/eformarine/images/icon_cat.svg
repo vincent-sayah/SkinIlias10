@@ -4,7 +4,7 @@
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
 <style type="text/css">
 	.efm-blue{fill:#003a70;}
-	.efm-red{fill:#e30613;}
+	.efm-red-outline{fill:none;stroke:#e30613;stroke-width:12;stroke-linejoin:round;stroke-linecap:round;}
 </style>
 <g>
 	<g>
@@ -16,7 +16,7 @@
 		</clipPath>
 		<path style="clip-path:url(#SVGID_00000182509536013347687930000012305570397904042175_);fill:#003a70;" d="M295,225V65c0-5.5-4.5-10-10-10H141.7L135,35H55v30v5H25v30v160c0,5.5,4.5,10,10,10h220c5.5,0,10-4.5,10-10
 			v-25h20C290.5,235,295,230.5,295,225"/>
-		<path style="clip-path:url(#SVGID_00000182509536013347687930000012305570397904042175_);fill:#e30613;" d="M90,85l6.7,20H250v150
+		<path class="efm-red-outline" style="clip-path:url(#SVGID_00000182509536013347687930000012305570397904042175_);" d="M90,85l6.7,20H250v150
 			H40V115v-10V85H90z"/>
 	</g>
 </g>

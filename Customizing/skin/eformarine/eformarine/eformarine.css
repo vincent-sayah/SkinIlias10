@@ -165,7 +165,7 @@ a:focus {
     content: url("images/logo/logo_eformarine_header.png") !important;
     display: block !important;
     width: min(320px, 34vw) !important;
-    max-width: 320px !important;
+   /* max-width: 320px !important;*/
     height: 56px !important;
     object-fit: contain !important;
     object-position: left center !important;
@@ -780,8 +780,8 @@ textarea:focus,
     #ilTopBar .il-logo img,
     #ilTopNav .il-logo img {
         content: url("images/logo/logo_eformarine_icon.png") !important;
-        width: 46px !important;
-        height: 46px !important;
+        width: 100% !important;
+        height: 100% !important;
     }
 
     .il-card-image-container {

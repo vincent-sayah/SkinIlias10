@@ -7,7 +7,6 @@ Le depot contient un skin installable dans `public/Customizing/skin/eformarine` 
 La version `1.1.9` garde la structure native ILIAS et concentre la personnalisation sur le CSS et les icones : logo eForm Marine dans le bandeau haut gauche, barre laterale bleu marine avec accent rouge lisible, panneaux lateraux gris, barre haute sobre, fil d'Ariane, onglets, tuiles, cartes repository, menus d'action non tronques et icones d'objets ILIAS d'origine recolorisees par element, sans fond colore en vue liste.
 
 ![Texte alternatif](https://github.com/vincent-sayah/SkinIlias10/blob/main/preview/page_catalogue.png)
-![Texte alternatif]()
 
 ## Structure
 

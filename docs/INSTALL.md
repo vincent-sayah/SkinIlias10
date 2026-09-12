@@ -85,7 +85,7 @@ bash /tmp/SkinIlias10/diagnose.sh auto
 
 Si le diagnostic indique que les fichiers eFormarine sont presents mais que l'interface ne les affiche toujours pas, redemarre le service PHP-FPM et le serveur web, puis vide le cache ILIAS.
 
-La version `1.1.4` ne doit afficher aucun template sous `public/Customizing/skin/eformarine/eformarine/UI`. Si `diagnose.sh` signale un override HTML, relance `install.sh` : il remplace le dossier complet du skin et supprime les anciens fichiers qui pouvaient casser la vue tuile/liste.
+La version `1.1.5` ne doit afficher aucun template sous `public/Customizing/skin/eformarine/eformarine/UI`. Si `diagnose.sh` signale un override HTML, relance `install.sh` : il remplace le dossier complet du skin et supprime les anciens fichiers qui pouvaient casser la vue tuile/liste.
 
 ## Mise a jour
 
@@ -102,4 +102,4 @@ cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
 chown -R apache:apache public/Customizing/skin/eformarine
 ```
 
-Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si necessaire, et recharge la page avec le cache navigateur ignore. La version `1.1.4` supprime tous les anciens overrides HTML UI : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.
+Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si necessaire, et recharge la page avec le cache navigateur ignore. La version `1.1.5` supprime tous les anciens overrides HTML UI : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.

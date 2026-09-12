@@ -1,6 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Sequence</title>
-  <rect width="64" height="64" rx="12" fill="none"/>
-  <path d="M17 18h14v12H17zM33 18h14v12H33zM17 36h14v12H17zM33 36h14v12H33z" fill="#001b39"/>
-  <path d="M31 24h2M31 42h2M40 30v6M24 30v6" stroke="#d60725" stroke-width="3" stroke-linecap="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original ILIAS 10 Delos icon, recolored for eFormarine. -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<defs>
+    <linearGradient id="efm-icon-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#001b39"/>
+        <stop offset="0.72" stop-color="#003a70"/>
+        <stop offset="1" stop-color="#e30613"/>
+    </linearGradient>
+</defs>
+<style type="text/css">
+	.st0{fill:url(#efm-icon-gradient);}
+	.st1{fill:none;}
+</style>
+<path class="st0" d="M236.4,170L160,254l-76.4-84H60l100,110l100-110H236.4z M236.4,105L160,189l-76.4-84H60l100,110l100-110H236.4z
+	 M60,40l100,110L260,40H60z"/>
+<rect class="st1" width="320" height="320"/>
 </svg>

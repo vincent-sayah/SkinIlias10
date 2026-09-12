@@ -1,7 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Sondage</title>
-  <rect width="64" height="64" rx="12" fill="none"/>
-  <rect x="15" y="12" width="34" height="42" rx="4" fill="#001b39"/>
-  <path d="M24 42V31M32 42V22M40 42V28" stroke="#2a347b" stroke-width="5" stroke-linecap="round"/>
-  <path d="M21 19h22" stroke="#d60725" stroke-width="3" stroke-linecap="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original ILIAS 10 Delos icon, recolored for eFormarine. -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<defs>
+    <linearGradient id="efm-icon-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#001b39"/>
+        <stop offset="0.72" stop-color="#003a70"/>
+        <stop offset="1" stop-color="#e30613"/>
+    </linearGradient>
+</defs>
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000123400934585478565630000008045840288750355107_);fill:url(#efm-icon-gradient);}
+	.st1{clip-path:url(#SVGID_00000127723478520160026530000006597455997268907438_);fill:url(#efm-icon-gradient);}
+</style>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" width="320" height="320"/>
+		</defs>
+		<clipPath id="SVGID_00000145765728087986001310000012196772301471185542_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<path style="clip-path:url(#SVGID_00000145765728087986001310000012196772301471185542_);fill:url(#efm-icon-gradient);" d="M272.4,175.1h-97.2
+			v97.2C227.2,268.7,268.7,227.2,272.4,175.1"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000155848402446024611570000007630517049131382659_" width="320" height="320"/>
+		</defs>
+		<clipPath id="SVGID_00000013878439949951351110000008495104692516865448_">
+			<use xlink:href="#SVGID_00000155848402446024611570000007630517049131382659_"  style="overflow:visible;"/>
+		</clipPath>
+		<path style="clip-path:url(#SVGID_00000013878439949951351110000008495104692516865448_);fill:url(#efm-icon-gradient);" d="M152.6,62.6
+			c-49.6,0-90,40.4-90,90c0,47.1,36.4,85.9,82.5,89.7v-97.2h97.2C238.5,99,199.7,62.6,152.6,62.6 M160.1,257.6h-7.5
+			c-57.9,0-105-47.1-105-105s47.1-105,105-105s105,47.1,105,105v7.5h-97.5V257.6z"/>
+	</g>
+</g>
 </svg>

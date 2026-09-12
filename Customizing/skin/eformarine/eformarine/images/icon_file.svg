@@ -1,8 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Fichier</title>
-  <rect width="64" height="64" rx="12" fill="none"/>
-  <path d="M19 10h18l10 10v34H19V10z" fill="#001b39"/>
-  <path d="M37 10v12h10" fill="#d9e2ec"/>
-  <path d="M25 31h14M25 38h14M25 45h10" stroke="#2a347b" stroke-width="3" stroke-linecap="round"/>
-  <path d="M19 54h28" stroke="#d60725" stroke-width="4"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original ILIAS 10 Delos icon, recolored for eFormarine. -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<defs>
+    <linearGradient id="efm-icon-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#001b39"/>
+        <stop offset="0.72" stop-color="#003a70"/>
+        <stop offset="1" stop-color="#e30613"/>
+    </linearGradient>
+</defs>
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000085215887426066592930000017504470771060310167_);fill:url(#efm-icon-gradient);}
+	.st1{fill:url(#efm-icon-gradient);}
+	.st2{fill:none;}
+</style>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="70" y="20" width="180" height="285"/>
+		</defs>
+		<clipPath id="SVGID_00000140734282329994794620000008735328238945772451_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<path style="clip-path:url(#SVGID_00000140734282329994794620000008735328238945772451_);fill:url(#efm-icon-gradient);" d="M250,245V25
+			c0-2.8-2.2-5-5-5H140h-10.2H125c-2.8,0-6.6,1.6-8.5,3.5l-43,43c-2,2-3.5,5.8-3.5,8.5v7.7V90v155c0,2.8,2.2,5,5,5h50v-15H85V90h55
+			V35h95v200h-40v15h50C247.8,250,250,247.8,250,245"/>
+	</g>
+</g>
+<polygon class="st1" points="140,205 140,265 110,265 160,305 210,265 180,265 180,205 "/>
+<rect class="st2" width="320" height="320"/>
 </svg>

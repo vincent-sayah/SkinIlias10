@@ -6,7 +6,15 @@ Le depot contient un skin installable dans `public/Customizing/skin/eformarine` 
 
 La version `1.1.12` garde la structure native ILIAS et concentre la personnalisation sur le CSS et les icones : logo eForm Marine dans le bandeau haut gauche, barre laterale bleu marine avec accent rouge lisible, panneaux lateraux gris, barre haute sobre, fil d'Ariane, onglets, tuiles avec point rouge apres le titre, cartes repository, menus d'action non tronques, logo du ministere des Armees une seule fois au debut du footer ILIAS 10 et icones d'objets ILIAS d'origine recolorisees par element, sans fond colore en vue liste.
 
-![Texte alternatif](https://github.com/vincent-sayah/SkinIlias10/blob/main/preview/page_catalogue.png)
+## Version stable
+
+La version fonctionnelle stable du skin est `1.1.12`.
+
+Etat visuel valide le `2026-09-13` sur la branche `main`. Le dernier reglage utilisateur conserve dans GitHub concerne les marques rouges des titres de tuiles. A partir de cet etat, la documentation peut evoluer, mais les fichiers du skin ne doivent plus etre modifies sans nouvelle demande explicite.
+
+Reference du rendu valide : `08461c26cd321ae8c7cadc2e791c997a81150b2b`.
+
+![Apercu du catalogue eFormarine](https://github.com/vincent-sayah/SkinIlias10/blob/main/preview/page_catalogue.png)
 
 ## Structure
 
@@ -82,3 +90,5 @@ Apres une mise a jour du skin, vide le cache ILIAS et recharge le navigateur san
 Un apercu statique est disponible dans [preview/eformarine-preview.html](preview/eformarine-preview.html).
 
 Il ne remplace pas un test dans ILIAS, mais il permet de visualiser rapidement la palette et les composants principaux.
+
+Les changements de version sont resumes dans [CHANGELOG.md](CHANGELOG.md).

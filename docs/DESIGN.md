@@ -1,5 +1,9 @@
 # Design eFormarine
 
+## Etat stable
+
+La version `1.1.12` est la version stable finale du skin eFormarine validee le `2026-09-13`. Le rendu du skin est fige : ne pas modifier les fichiers CSS, SCSS, icones, logos ou templates sans nouvelle demande explicite.
+
 ## Intention
 
 Le skin eFormarine habille ILIAS 10 avec une identite inspiree de La Marine recrute : bleu institutionnel tres sombre, surfaces blanches, accent rouge franc et typographies proches de Marianne/Anisette quand elles sont disponibles sur le poste.
@@ -31,6 +35,6 @@ Le skin eFormarine habille ILIAS 10 avec une identite inspiree de La Marine recr
 - La version ne contient aucun override HTML UI. C'est volontaire : les templates HTML de carte et de layout peuvent modifier la bascule native liste/tuile et casser le positionnement des panneaux ILIAS.
 - Le dossier `images` fournit des icones SVG `icon_*.svg` issues des pictogrammes ILIAS 10 Delos d'origine. Les pictos principaux sont recolorises par element : cours avec tableau bleu et trepied rouge, categorie avec ombre bleue, face avant blanche et contour rouge, fichier bleu avec fleche rouge, modules ILIAS/HTML/SCORM avec livre bleu et traits rouges, forum avec grande bulle bleue et petite bulle rouge, groupe d'objets avec premiere barre et points rouges, plus les autres objets courants ajoutes en bleu/rouge.
 - Les icones d'objets sont transparentes : en vue liste, ILIAS affiche seulement le pictogramme, sans carre bleu de fond.
-- Les titres principaux d'objet utilisent un point rouge typographique rapproche du texte avec compensation de l'espace HTML natif du titre. Les titres de tuiles gardent un petit point rouge final.
+- Les titres principaux d'objet utilisent un point rouge typographique rapproche du texte avec compensation de l'espace HTML natif du titre. Les titres de tuiles gardent la marque rouge finale validee dans le dernier etat GitHub.
 - Le footer ILIAS 10 affiche une seule fois le bloc-marque du ministere des Armees au debut du footer depuis `images/logo/logo-ministere-armees-anciens-combattants-ilias.svg`.
 - Les classes utilitaires `eformarine-banner`, `eformarine-brand` et `eformarine-callout` peuvent etre utilisees dans du contenu de page ILIAS si besoin.

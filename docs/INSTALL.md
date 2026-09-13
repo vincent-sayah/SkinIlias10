@@ -1,5 +1,17 @@
 # Installation du skin eFormarine sur ILIAS 10
 
+## Version stable
+
+La version stable finale du skin est `1.1.12`.
+
+Pour installer exactement le rendu valide avant les corrections de documentation finales, tu peux figer le depot sur le commit suivant :
+
+```bash
+git checkout 08461c26cd321ae8c7cadc2e791c997a81150b2b
+```
+
+Sinon, l'installation depuis `main` installe le meme skin stable, avec la documentation la plus recente.
+
 ## Installation rapide
 
 Depuis le serveur ILIAS :

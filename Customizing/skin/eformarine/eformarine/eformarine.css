@@ -1,6 +1,6 @@
 @import url("../../../../assets/css/delos.css");
 
-/* eFormarine 1.1.10: object title red dots and ministry footer mark. */
+/* eFormarine 1.1.11: tighter title dots and ILIAS 10 footer logo selector. */
 
 :root {
     --efm-navy-950: #001b39;
@@ -436,9 +436,14 @@ h1.ilheader::after,
 .ilHeaderDesc h1::after,
 .il-title-bar h1::after,
 .ilc_PageTitle::after {
-    content: ".";
-    color: var(--efm-red-600);
-    font-weight: 900;
+    content: "";
+    display: inline-block;
+    width: 0.24em;
+    height: 0.24em;
+    margin-left: 0.08em;
+    border-radius: 999px;
+    background: var(--efm-red-600);
+    vertical-align: 0.2em;
 }
 
 .ilToolbar,
@@ -847,9 +852,14 @@ img[src*="icon_spl.svg"] { content: url("images/icon_spl.svg") !important; }
 .il-card .caption.card-title a::after,
 .il-card .card-title > span::after,
 .il-card .caption.card-title > span::after {
-    content: ".";
-    color: var(--efm-red-600);
-    font-weight: 900;
+    content: "";
+    display: inline-block;
+    width: 0.32em;
+    height: 0.32em;
+    margin-left: 0.12em;
+    border-radius: 999px;
+    background: var(--efm-red-600);
+    vertical-align: 0.18em;
 }
 
 .il-card .card-title a:hover,
@@ -946,6 +956,7 @@ textarea:focus,
 .il-footer,
 .ilMainFooter,
 .il-maincontrols-footer,
+.c-maincontrols__footer,
 #ilFooterPermanent,
 body > footer,
 .il-layout-page > footer {
@@ -954,19 +965,27 @@ body > footer,
     color: var(--efm-muted) !important;
 }
 
-#ilFooter::before,
-.ilFooter::before,
-.il-footer::before,
-.ilMainFooter::before,
-.il-maincontrols-footer::before,
-#ilFooterPermanent::before,
-body > footer::before,
-.il-layout-page > footer::before {
+#ilFooter .ilFooterContainer::before,
+.ilFooter .ilFooterContainer::before,
+.c-maincontrols__footer-grid::before {
     content: "";
     display: block;
     width: min(280px, 72vw);
     height: 58px;
-    margin: 14px auto;
+    margin: 8px auto 12px;
+    background: url("images/logo/logo-ministere-armees-anciens-combattants-ilias.svg") center / contain no-repeat;
+}
+
+.c-maincontrols__footer-grid::before {
+    grid-column: 1 / -1;
+}
+
+.il-layout-page > footer:not(#ilFooter):not(.ilFooter):not(.c-maincontrols__footer)::before {
+    content: "";
+    display: block;
+    width: min(280px, 72vw);
+    height: 58px;
+    margin: 8px auto 12px;
     background: url("images/logo/logo-ministere-armees-anciens-combattants-ilias.svg") center / contain no-repeat;
 }
 

@@ -64,6 +64,7 @@ public/Customizing/skin/eformarine/eformarine/images/eformarine-mark.svg
 public/Customizing/skin/eformarine/eformarine/images/logo/HeaderIcon.svg
 public/Customizing/skin/eformarine/eformarine/images/logo/logo_eformarine_header.png
 public/Customizing/skin/eformarine/eformarine/images/logo/logo_eformarine_icon.png
+public/Customizing/skin/eformarine/eformarine/images/logo/logo-ministere-armees-anciens-combattants-ilias.svg
 ```
 
 Verifie aussi que le fichier XML est lisible par Apache/PHP-FPM, puis vide le cache ILIAS depuis l'administration.
@@ -85,7 +86,7 @@ bash /tmp/SkinIlias10/diagnose.sh auto
 
 Si le diagnostic indique que les fichiers eFormarine sont presents mais que l'interface ne les affiche toujours pas, redemarre le service PHP-FPM et le serveur web, puis vide le cache ILIAS.
 
-La version `1.1.9` ne doit afficher aucun template sous `public/Customizing/skin/eformarine/eformarine/UI`. Si `diagnose.sh` signale un override HTML, relance `install.sh` : il remplace le dossier complet du skin et supprime les anciens fichiers qui pouvaient casser la vue tuile/liste.
+La version `1.1.10` ne doit afficher aucun template sous `public/Customizing/skin/eformarine/eformarine/UI`. Si `diagnose.sh` signale un override HTML, relance `install.sh` : il remplace le dossier complet du skin et supprime les anciens fichiers qui pouvaient casser la vue tuile/liste.
 
 ## Mise a jour
 
@@ -102,4 +103,4 @@ cp -a /tmp/SkinIlias10/Customizing/skin/eformarine public/Customizing/skin/
 chown -R apache:apache public/Customizing/skin/eformarine
 ```
 
-Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si necessaire, et recharge la page avec le cache navigateur ignore. La version `1.1.9` supprime tous les anciens overrides HTML UI : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.
+Ensuite, vide le cache ILIAS, redemarre PHP-FPM/Apache si necessaire, et recharge la page avec le cache navigateur ignore. La version `1.1.10` supprime tous les anciens overrides HTML UI : il faut donc relancer `install.sh`, pas seulement remplacer le fichier CSS.

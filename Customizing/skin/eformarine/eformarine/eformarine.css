@@ -1,6 +1,6 @@
 @import url("../../../../assets/css/delos.css");
 
-/* eFormarine 1.1.9: original ILIAS object icons recolored by semantic parts. */
+/* eFormarine 1.1.10: object title red dots and ministry footer mark. */
 
 :root {
     --efm-navy-950: #001b39;
@@ -429,6 +429,18 @@ h3,
     color: var(--efm-navy-800);
 }
 
+h1.ilHeader::after,
+h1.ilheader::after,
+.ilHeader h1::after,
+.il_HeaderInner h1::after,
+.ilHeaderDesc h1::after,
+.il-title-bar h1::after,
+.ilc_PageTitle::after {
+    content: ".";
+    color: var(--efm-red-600);
+    font-weight: 900;
+}
+
 .ilToolbar,
 .il_Block,
 .ilInfoScreenSec,
@@ -831,6 +843,15 @@ img[src*="icon_spl.svg"] { content: url("images/icon_spl.svg") !important; }
     color: var(--efm-navy-950) !important;
 }
 
+.il-card .card-title a::after,
+.il-card .caption.card-title a::after,
+.il-card .card-title > span::after,
+.il-card .caption.card-title > span::after {
+    content: ".";
+    color: var(--efm-red-600);
+    font-weight: 900;
+}
+
 .il-card .card-title a:hover,
 .il-card .caption.card-title a:hover {
     color: var(--efm-red-600) !important;
@@ -918,6 +939,35 @@ textarea:focus,
     background: #fdecef !important;
     border-color: rgba(214, 7, 37, 0.34) !important;
     color: var(--efm-red-700) !important;
+}
+
+#ilFooter,
+.ilFooter,
+.il-footer,
+.ilMainFooter,
+.il-maincontrols-footer,
+#ilFooterPermanent,
+body > footer,
+.il-layout-page > footer {
+    background: var(--efm-white) !important;
+    border-top: 1px solid var(--efm-line) !important;
+    color: var(--efm-muted) !important;
+}
+
+#ilFooter::before,
+.ilFooter::before,
+.il-footer::before,
+.ilMainFooter::before,
+.il-maincontrols-footer::before,
+#ilFooterPermanent::before,
+body > footer::before,
+.il-layout-page > footer::before {
+    content: "";
+    display: block;
+    width: min(280px, 72vw);
+    height: 58px;
+    margin: 14px auto;
+    background: url("images/logo/logo-ministere-armees-anciens-combattants-ilias.svg") center / contain no-repeat;
 }
 
 .ilStartupSection,

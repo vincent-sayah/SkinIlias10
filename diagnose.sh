@@ -71,6 +71,7 @@ EFM_UI_DIR="${EFM_DIR}/eformarine/UI"
 EFM_HEADER_ICON="${EFM_DIR}/eformarine/images/logo/HeaderIcon.svg"
 EFM_HEADER_LOGO="${EFM_DIR}/eformarine/images/logo/logo_eformarine_header.png"
 EFM_ICON_LOGO="${EFM_DIR}/eformarine/images/logo/logo_eformarine_icon.png"
+EFM_MINISTRY_LOGO="${EFM_DIR}/eformarine/images/logo/logo-ministere-armees-anciens-combattants-ilias.svg"
 LEGACY_EFM_TEMPLATE="${LEGACY_SKIN_DIR}/eformarine/template.xml"
 
 echo "== eFormarine / ILIAS skin diagnostic =="
@@ -174,6 +175,12 @@ if [ -f "${EFM_ICON_LOGO}" ]; then
     echo "OK  ${EFM_ICON_LOGO}"
 else
     echo "MISS ${EFM_ICON_LOGO}"
+fi
+
+if [ -f "${EFM_MINISTRY_LOGO}" ]; then
+    echo "OK  ${EFM_MINISTRY_LOGO}"
+else
+    echo "MISS ${EFM_MINISTRY_LOGO}"
 fi
 echo
 

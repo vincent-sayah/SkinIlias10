@@ -854,9 +854,9 @@ img[src*="icon_spl.svg"] { content: url("images/icon_spl.svg") !important; }
     width: 0.32em;
     height: 0.32em;
     margin-left: 0.12em;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     background: var(--efm-red-600);
-    vertical-align: 0.18em;
+    /* vertical-align: 0.18em; */
 }
 
 .il-card .card-title a:hover,

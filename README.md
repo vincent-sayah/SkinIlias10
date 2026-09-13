@@ -54,7 +54,7 @@ Sources principales :
 - [ILIAS release_10 - template Delos](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/templates/default/template.xml)
 - [ILIAS release_10 - System Styles documentation](https://github.com/ILIAS-eLearning/ILIAS/blob/release_10/templates/Readme.md)
 
-## Installation
+## Installation rapide
 
 ```bash
 cd /tmp
@@ -72,18 +72,18 @@ bash diagnose.sh auto
 bash install.sh auto
 ```
 
-Puis, dans ILIAS :
+Activation dans ILIAS :
 
 1. Administration des styles systeme.
 2. Activer le skin `eFormarine`.
 3. Selectionner le style `eFormarine - Marine nationale`.
-4. Le definir comme style par defaut si necessaire.
+4. Definir le style comme style par defaut si necessaire.
 
 La procedure detaillee est dans [docs/INSTALL.md](docs/INSTALL.md).
 
-Si ILIAS affiche une ligne `other`, ce n'est pas le skin eFormarine : ILIAS l'ajoute quand un utilisateur est affecte a un style qui n'existe plus. Lance `bash diagnose.sh /var/www/html/ilias` pour verifier que les fichiers eFormarine sont bien au bon endroit.
+Si ILIAS affiche une ligne `other`, celle-ci ne correspond pas au skin eFormarine : ILIAS l'ajoute lorsqu'un utilisateur est affecte a un style qui n'existe plus. La commande `bash diagnose.sh /var/www/html/ilias` permet de verifier que les fichiers eFormarine sont bien au bon endroit.
 
-Apres une mise a jour du skin, vide le cache ILIAS et recharge le navigateur sans cache. Si une ancienne version a deja ete appliquee, relance bien `install.sh` pour supprimer les anciens overrides HTML du skin installe.
+Apres une mise a jour du skin, le cache ILIAS doit etre vide et la page doit etre rechargee sans cache navigateur. Lorsqu'une ancienne version a deja ete appliquee, `install.sh` doit etre relance afin de supprimer les anciens overrides HTML du skin installe.
 
 ## Apercu
 

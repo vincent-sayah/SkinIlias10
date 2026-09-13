@@ -1,5 +1,6 @@
 # SkinIlias10 - eFormarine
 
+![Apercu du catalogue eFormarine](https://github.com/vincent-sayah/SkinIlias10/blob/main/preview/page_catalogue.png)
 Skin `eformarine` pour ILIAS 10, inspire de l'identite visuelle Marine nationale et de la palette du site La Marine recrute.
 
 Le depot contient un skin installable dans `public/Customizing/skin/eformarine` pour ILIAS 10, avec un style unique : `eFormarine - Marine nationale`.
@@ -13,8 +14,6 @@ La version fonctionnelle stable du skin est `1.1.12`.
 Etat visuel valide le `2026-09-13` sur la branche `main`. Le dernier reglage utilisateur conserve dans GitHub concerne les marques rouges des titres de tuiles. A partir de cet etat, la documentation peut evoluer, mais les fichiers du skin ne doivent plus etre modifies sans nouvelle demande explicite.
 
 Reference du rendu valide : `08461c26cd321ae8c7cadc2e791c997a81150b2b`.
-
-![Apercu du catalogue eFormarine](https://github.com/vincent-sayah/SkinIlias10/blob/main/preview/page_catalogue.png)
 
 ## Structure
 
